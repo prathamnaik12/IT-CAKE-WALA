@@ -11,33 +11,28 @@
 </head>
 
 <body>
+  <div class="fixed top-0 w-full z-10">
   <!-- Top bar -->
-  <div class="flex bg-topbar-color text-white p-2 items-center justify-between fixed top-0 w-full z-10">
-    <!-- Logo -->
-    <div class="flex items-center pl-10">
-      <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
-      <span class="font-bold text-lg pl-10">IT CAKE WALA</span>
-    </div>
+  <div class="bg-topbar-color text-white p-2 ">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center pl-10">
+        <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
+        <span class="font-bold text-lg">IT CAKE WALA</span>
+      </div>
   
-    <!-- Contact Details -->
-    <div class="flex items-center space-x-4">
-      <span class="text-white">Call Us: +91 921 242 2000</span>
-      <span class="text-white">Corporate Gifts</span>
-  
-      <!-- Enquiry Form Link -->
-      <a href="#" class="p-1 border rounded border-white text-white">Enquiry Form</a>
+      <!-- Contact Details and Links -->
+      <div class="lg:flex lg:items-center space-x-4 ml-4 sm:hidden">
+        <span class="text-white">Call Us: +91 921 242 2000</span>
+        <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
+        <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white sm:hidden">Enquiry Form</a>
+      </div>
     </div>
   </div>
-
   <!-- navbar -->
-  <nav class="bg-red-200 filter drop-shadow-xl fixed top-11 w-full z-10">
-    <div class="container mx-auto px-4 flex justify-center py-3">
-      <button class="lg:hidden text-orange-800 focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
-      <div class="hidden lg:flex lg:items-center lg:w-auto">
+  <nav class="bg-red-200 filter drop-shadow-xl w-full">
+    <div class="container mx-auto px-4 flex justify-center items-center py-3">
+      <div class="lg:flex lg:items-center lg:w-auto" id="menu">
         <ul class="flex items-center space-x-4 lg:space-x-8">
           <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
           <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
@@ -63,8 +58,9 @@
       </div>
     </div>
   </nav>
+  </div>
   <!-- Special choices /offers -->
-    <div class="bg-red-50 p-5 text-center">
+    <div class="bg-red-50 p-5 text-center mt-20">
       <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-amber-900 hover:decoration-amber-300 transition-colors">
         Cakes: Fresh & Favourful
       </h1>
@@ -154,7 +150,7 @@
         <div class="grid grid-cols-3 gap-4">
           <a href="./birthday.html" class="group">
             <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
-              src="./images/1999_web.webp" alt="999/-">
+              src="./images/999_web.webp" alt="999/-">
           </a>
           <a href="./anniversary.html" class="group">
             <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
@@ -167,6 +163,57 @@
         </div>
       </div>
     </div>
-    <div></div>
+    <div class="bg-grey-100 rounded-lg grid grid-cols-3 gap-6 justify-items-center p-10">
+      <h4 class="group "> 
+      <img class="h-20" src="./images/cake-icon.png" alt="">
+      Get hygenic and made <br>from good ingredients <br>cakes </h4>
+      <h4 class="group ">
+        <img class="h-20" src="./images/secure-icon.png" alt="">
+        Make the payments <br>securely we provide<br>safe payment methods
+      </h4>
+      <h4 class="group ">
+        <img class="h-20" src="./images/helpcall-icon.png" alt="secure">
+        Feel free to contact we are<br>here to help<br>make your birthday delightful
+      </h4>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-8">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">About Us</h3>
+            <p>IT CAKE WALA is a premier bakery company.Our bakery is renowned for crafting exquisite cakes that are not only visually stunning but also feature the latest in
+            edible tech.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="list-none">
+              <li><a href="#" class="hover:text-gray-300">Home</a></li>
+              <li><a href="#" class="hover:text-gray-300">Birthday Cakes</a></li>
+              <li><a href="#" class="hover:text-gray-300">Anniversary Cakes</a></li>
+              <li><a href="#" class="hover:text-gray-300">Personalized Cakes</a></li>
+              <li><a href="#" class="hover:text-gray-300">Corporate Gifts</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <p>123 Street, City Name<br>
+              Country<br>
+              Phone: +91 123 456 7890<br>
+              Email: info@example.com
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+            <ul class="list-none">
+              <li><a href="#" class="hover:text-gray-300">Facebook</a></li>
+              <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
+              <li><a href="#" class="hover:text-gray-300">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
