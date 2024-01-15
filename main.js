@@ -1,6 +1,6 @@
 function handleWindowSizeChange() {
   const specialChoicesGrid = document.getElementById("special-choices-grid");
-  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const isMobile = window.matchMedia("(max-height: 450px)").matches;
 
   if (isMobile) {
     console.log("window")
@@ -12,10 +12,8 @@ function handleWindowSizeChange() {
   }
 }
 
-// Initial call to set grid based on window size
 handleWindowSizeChange();
 
-// Listen for window resize events
 window.addEventListener('resize', handleWindowSizeChange);
 
 
