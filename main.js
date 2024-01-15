@@ -1,6 +1,6 @@
 function handleWindowSizeChange() {
   const specialChoicesGrid = document.getElementById("special-choices-grid");
-  const isMobile = window.matchMedia("(max-height: 450px)").matches;
+  const isMobile = window.matchMedia("(max-width: 450px)").matches;
 
   if (isMobile) {
     console.log("window")
