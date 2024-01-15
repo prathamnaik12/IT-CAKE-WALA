@@ -1,21 +1,23 @@
-function handleWindowSizeChange() {
-  const specialChoicesGrid = document.getElementById("special-choices-grid");
-  const isMobile = window.matchMedia("(max-width: 450px)").matches;
+function updateClassOnWidthChange() {
+    const specialGrid = document.getElementById('special-choices-grid');
 
-  if (isMobile) {
-    console.log("window")
-    specialChoicesGrid.classList.remove("grid-cols-2");
-    specialChoicesGrid.classList.add("grid-cols-1");
-  } else {
-    specialChoicesGrid.classList.remove("grid-cols-1");
-    specialChoicesGrid.classList.add("grid-cols-2");
+    if (window.innerWidth <= 450) {
+      specialGrid.classList.remove('grid-cols-2');
+      specialGrid.classList.add('grid-cols-1'); 
+    }
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 450) {
+        specialGrid.classList.remove('grid-cols-1');
+        specialGrid.classList.add('grid-cols-2'); 
+      } else {
+        specialGrid.classList.remove('grid-cols-2'); 
+        specialGrid.classList.add('grid-cols-1');
+      }
+    });
   }
-}
 
-handleWindowSizeChange();
-
-window.addEventListener('resize', handleWindowSizeChange);
-
+  // Call the function on page load
+window.onload(updateClassOnWidthChange())
 
 
 
