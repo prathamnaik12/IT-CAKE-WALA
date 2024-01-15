@@ -11,123 +11,162 @@
 </head>
 
 <body>
-  <nav class="bg-red-200">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between py-3">
-        <a class="text-Zinc-800 font-black text-lg underline decoration-Amber-300" href="#">IT CAKE WALA</a>
-        <button class="lg:hidden text-orange-800 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-        <div class="hidden lg:flex lg:items-center lg:w-auto">
-          <ul class="flex items-center space-x-4 lg:space-x-8">
-            <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
-            <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
-            <li class="group relative">
-              <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
-              <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
-                <li><a class="block px-4 py-2" href="#">Action</a></li>
-                <li><a class="block px-4 py-2" href="#">Another action</a></li>
-                <li>
-                  <hr class="border-t border-gray-500 my-2">
-                </li>
-                <li><a class="block px-4 py-2" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li><a class="text-black hover:text-gray-300" href="/personalised.html" aria-disabled="true">Personalized</a></li>
-          </ul>
-          <form class="flex items-center ml-4" role="search">
-            <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
-              placeholder="Search" aria-label="Search">
-            <button class="bg-green-500 text-white px-4 py-1 rounded-md ml-2" type="submit">Search</button>
-          </form>
-        </div>
+  <!-- Top bar -->
+  <div class="flex bg-topbar-color text-white p-2 items-center justify-between fixed top-0 w-full z-10">
+    <!-- Logo -->
+    <div class="flex items-center pl-10">
+      <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
+      <span class="font-bold text-lg pl-10">IT CAKE WALA</span>
+    </div>
+  
+    <!-- Contact Details -->
+    <div class="flex items-center space-x-4">
+      <span class="text-white">Call Us: +91 921 242 2000</span>
+      <span class="text-white">Corporate Gifts</span>
+  
+      <!-- Enquiry Form Link -->
+      <a href="#" class="p-1 border rounded border-white text-white">Enquiry Form</a>
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="bg-red-200 filter drop-shadow-xl fixed top-11 w-full z-10">
+    <div class="container mx-auto px-4 flex justify-center py-3">
+      <button class="lg:hidden text-orange-800 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <div class="hidden lg:flex lg:items-center lg:w-auto">
+        <ul class="flex items-center space-x-4 lg:space-x-8">
+          <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
+          <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
+          <li class="group relative">
+            <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
+            <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
+              <li><a class="block px-4 py-2" href="#">Action</a></li>
+              <li><a class="block px-4 py-2" href="#">Another action</a></li>
+              <li>
+                <hr class="border-t border-gray-500 my-2">
+              </li>
+              <li><a class="block px-4 py-2" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li><a class="text-black hover:text-gray-300" href="/personalised.html" aria-disabled="true">Personalized</a>
+          </li>
+        </ul>
+        <form class="flex items-center ml-4" role="search">
+          <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
+            placeholder="Search" aria-label="Search">
+          <button class="bg-green-500 text-white px-4 py-1 rounded-md ml-2" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
+  <!-- Special choices /offers -->
     <div class="bg-red-50 p-5 text-center">
-      <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-amber-300">
+      <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-amber-900 hover:decoration-amber-300 transition-colors">
         Cakes: Fresh & Favourful
       </h1>
       <div class="bg-white rounded-lg p-7 place-items-center">
         <div class="grid grid-cols-2 gap-4">
           <a href="./new_arrival.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/New-Arrival_Web.webp" alt="Brand new arrivals">
           </a>
           <a href="./bestseller.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Bestseller_Web.webp" alt="Bestseller">
           </a>
           <a href="./sameday.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Same-Day_Web.webp" alt="Same Day">
           </a>
           <a href="./midnight_delivery.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Midnight-Delivery_Web.webp" alt="Midnight Delivery">
           </a>
         </div>
       </div>
+      <!-- Occasions choices -->
       <div class="bg-white rounded-lg m-5 p-7 place-items-center">
-        <h1 class="font-pacifico font-black p-2 text-2xl">Celebrate Special Occasions</h1>
+        <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-blue-900 hover:decoration-blue-400 transition-colors">Celebrate Special Occasions</h1>
         <div class="grid grid-cols-2 gap-4">
           <a href="./birthday.html" class="group">
-            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Birthday_web.jpg" alt="Birthday">
           </a>
           <a href="./anniversary.html" class="group">
-            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Anniversary_web.webp" alt="anniversary">
           </a>
         </div>
       </div>
+      <!-- Flavour choices  -->
       <div class="bg-white rounded-lg m-5 p-7 place-items-center">
-        <h1 class="font-pacifico font-black p-2 text-2xl">Pick a Flavour </h1>
+        <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-green-700 hover:decoration-green-300 transition-colors">Pick a Flavour </h1>
         <div class="grid grid-cols-4 gap-4">
           <a href="./birthday.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Chocolate-Cakes-web_2.webp" alt="Birthday">
               <h3 class="font-pacifico font-thin p-2 text-lg">Chocolate cakes</h3>
           </a>
           <a href="./anniversary.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Black-Forest-Cakes_web.webp" alt="anniversary">
               <h3 class="font-pacifico font-thin p-2 text-lg">Black Forest cakes</h3>
           </a>
           <a href="./birthday.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Butterscotch-Cakes_web.webp" alt="Birthday">
               <h3 class="font-pacifico font-thin p-2 text-lg">Butterscotch cakes</h3>
           </a>
           <a href="./anniversary.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Pineapple-Cakes_web.webp" alt="anniversary">
               <h3 class="font-pacifico font-thin p-2 text-lg">Pineapple cakes</h3>
           </a>
           <a href="./birthday.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Truffle-Cakes_web.webp" alt="Birthday">
               <h3 class="font-pacifico font-thin p-2 text-lg">Truffle cakes</h3>
           </a>
           <a href="./anniversary.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Red-Velvet-Cakes_web.webp" alt="anniversary">
               <h3 class="font-pacifico font-thin p-2 text-lg">Red Valvet cakes</h3>
           </a>
           <a href="./birthday.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Fresh-Fruit-Cakes_web.webp" alt="Birthday">
               <h3 class="font-pacifico font-thin p-2 text-lg">Fresh Fruits cakes</h3>
           </a>
           <a href="./anniversary.html" class="group">
-            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-110"
+            <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Vanila-Cakes_web.webp" alt="anniversary">
               <h3 class="font-pacifico font-thin p-2 text-lg">Vanila cakes</h3>
           </a>
         </div>
       </div>
+      <!-- Shop by price  -->
+      <div class="bg-white rounded-lg m-5 p-7 place-items-center">
+        <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-red-900 hover:decoration-red-400 transition-colors">Shop By Price</h1>
+        <div class="grid grid-cols-3 gap-4">
+          <a href="./birthday.html" class="group">
+            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
+              src="./images/1999_web.webp" alt="999/-">
+          </a>
+          <a href="./anniversary.html" class="group">
+            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
+              src="./images/1499_web.webp" alt="1499/-">
+          </a>
+          <a href="./anniversary.html" class="group">
+            <img class="w-full object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
+              src="./images/1999_web.webp" alt="1999/-">
+          </a>
+        </div>
+      </div>
     </div>
+    <div></div>
 </body>
 </html>
