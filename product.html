@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="./output.css">
+    <title>IT CAKE WALA</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+</head>
+
+<body>
+    <div class="fixed top-0 w-full z-10">
+        <!-- Top bar -->
+        <div class="bg-topbar-color text-white p-2 ">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center pl-10">
+                    <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
+                    <span class="font-bold text-lg">IT CAKE WALA</span>
+                </div>
+
+                <!-- Contact Details and Links -->
+                <div class="lg:flex lg:items-center space-x-4 ml-4 sm:hidden">
+                    <span class="text-white">Call Us: +91 921 242 2000</span>
+                    <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
+                    <a href="#"
+                        class="lg:inline-block ml-2 p-1 border rounded border-white text-white sm:hidden">Enquiry
+                        Form</a>
+                </div>
+            </div>
+        </div>
+        <!-- navbar -->
+        <nav class="bg-red-200 filter drop-shadow-xl w-full">
+            <div class="container mx-auto px-4 flex justify-center items-center py-3">
+                <div class="lg:flex lg:items-center lg:w-auto" id="menu">
+                    <form class="flex items-center mr-4 " role="search">
+                        <button class="bg-green-500 text-white px-4 py-1 rounded-md mr-2" type="submit">Search</button>
+                        <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none"
+                            type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <ul class="flex items-center space-x-4 lg:space-x-8">
+                        <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
+                        <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
+                        <li class="group relative">
+                            <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
+                            <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
+                                <li><a class="block px-4 py-2" href="#">Action</a></li>
+                                <li><a class="block px-4 py-2" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="border-t border-gray-500 my-2">
+                                </li>
+                                <li><a class="block px-4 py-2" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="text-black hover:text-gray-300" href="/personalised.html"
+                                aria-disabled="true">Personalized</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- product -Cakes order details  -->
+    <div class="bg-red-100 mt-10 pt-40 sm:pt-20">
+        <div class="inline-flex pl-10 sm:pl-40">
+            <a class="text-black hover:text-gray-300" href="./index.html">Home</a><h1>></h1><a class="text-black hover:text-gray-300" id="navigated-pg-link" href="">_</a>
+        </div>
+    </div>
+
+    <script src="main.js"> </script>
+</body>
+</html>

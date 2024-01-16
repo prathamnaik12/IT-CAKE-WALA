@@ -1,24 +1,12 @@
-function updateClassOnWidthChange() {
-    const specialGrid = document.getElementById('special-choices-grid');
+var navigatedPGlink = document.referrer;
 
-    if (window.innerWidth <= 450) {
-      specialGrid.classList.remove('grid-cols-2');
-      specialGrid.classList.add('grid-cols-1'); 
-    }
-    window.addEventListener('resize', function () {
-      if (window.innerWidth >= 450) {
-        specialGrid.classList.remove('grid-cols-1');
-        specialGrid.classList.add('grid-cols-2'); 
-      } else {
-        specialGrid.classList.remove('grid-cols-2'); 
-        specialGrid.classList.add('grid-cols-1');
-      }
-    });
+window.addEventListener('load',function(){
+  if(window.location.pathname ==='/product.html'){
+    var navigatedPGlink = document.referrer;
+    let link = document.getElementById("navigated-pg-link")
+    var fileName = navigatedPGlink.split('/').pop().replace('.html', '');
+    link.href = navigatedPGlink
+    link.textContent = fileName
   }
-
-  // Call the function on page load
-window.onload(updateClassOnWidthChange())
-
-
-
+})
 
