@@ -22,22 +22,27 @@
       </div>
   
       <!-- Contact Details and Links -->
-      <div class="lg:flex lg:items-center space-x-4 ml-4 sm:hidden">
+      <div class="hidden lg:flex lg:items-center space-x-4 ml-4 md:block">
         <span class="text-white">Call Us: +91 921 242 2000</span>
         <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
-        <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white sm:hidden">Enquiry Form</a>
+        <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white hidden">Enquiry Form</a>
       </div>
     </div>
   </div>
   <!-- navbar -->
   <nav class="bg-red-200 filter drop-shadow-xl w-full">
     <div class="container mx-auto px-4 flex justify-center items-center py-3">
-      <div class="lg:flex lg:items-center lg:w-auto" id="menu">
+      <div class="lg:flex lg:items-center lg:w-auto">
+        <form class="flex items-center mr-4 " role="search">
+          <button class="bg-green-500 text-white px-4 py-1 rounded-md mr-2" type="submit">Search</button>
+          <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
+            placeholder="Search" aria-label="Search">
+        </form>
         <ul class="flex items-center space-x-4 lg:space-x-8">
-          <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
-          <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
+          <li><a class="text-black underline hover:text-gray-300 lg:underline-offset-1" href="./index.html">Home</a></li>
+          <li><a class="text-black underline hover:text-gray-300 md:underline-offset-0" href="./birthday.html">Birthday</a></li>
           <li class="group relative">
-            <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
+            <a class="text-black underline hover:text-gray-300 md:underline-offset-0" href="./anniversary.html">Anniversary</a>
             <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
               <li><a class="block px-4 py-2" href="#">Action</a></li>
               <li><a class="block px-4 py-2" href="#">Another action</a></li>
@@ -47,14 +52,9 @@
               <li><a class="block px-4 py-2" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li><a class="text-black hover:text-gray-300" href="/personalised.html" aria-disabled="true">Personalized</a>
+          <li><a class="text-black underline hover:text-gray-300 md:underline-offset-0" href="/personalised.html" aria-disabled="true">Personalized</a>
           </li>
         </ul>
-        <form class="flex items-center ml-4" role="search">
-          <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
-            placeholder="Search" aria-label="Search">
-          <button class="bg-green-500 text-white px-4 py-1 rounded-md ml-2" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -101,7 +101,7 @@
       <!-- Flavour choices  -->
       <div class="bg-white rounded-lg m-5 p-7 place-items-center">
         <h1 class="font-pacifico font-black p-2 text-2xl underline decoration-green-700 hover:decoration-green-300 transition-colors">Pick a Flavour </h1>
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="grid gap-4 grid">
           <a href="./birthday.html" class="group">
             <img class="w-full-object-cover rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:z-10"
               src="./images/Chocolate-Cakes-web_2.webp" alt="Birthday">
