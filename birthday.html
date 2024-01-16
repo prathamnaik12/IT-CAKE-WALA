@@ -34,6 +34,11 @@
       <nav class="bg-red-200 filter drop-shadow-xl w-full">
         <div class="container mx-auto px-4 flex justify-center items-center py-3">
           <div class="lg:flex lg:items-center lg:w-auto" id="menu">
+            <form class="flex items-center mr-4 " role="search">
+              <button class="bg-green-500 text-white px-4 py-1 rounded-md mr-2" type="submit">Search</button>
+              <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
+                placeholder="Search" aria-label="Search">
+            </form>
             <ul class="flex items-center space-x-4 lg:space-x-8">
               <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
               <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
@@ -52,11 +57,6 @@
                   aria-disabled="true">Personalized</a>
               </li>
             </ul>
-            <form class="flex items-center ml-4" role="search">
-              <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
-                placeholder="Search" aria-label="Search">
-              <button class="bg-green-500 text-white px-4 py-1 rounded-md ml-2" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
