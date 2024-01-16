@@ -1074,6 +1074,10 @@ video {
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .sm\:underline {
+    text-decoration-line: underline;
+  }
 }
 
 @media (min-width: 768px) {
