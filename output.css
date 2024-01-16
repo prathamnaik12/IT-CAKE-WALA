@@ -676,6 +676,10 @@ video {
   height: 2rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -1061,6 +1065,10 @@ video {
 
   .sm\:h-2 {
     height: 0.5rem;
+  }
+
+  .sm\:h-10 {
+    height: 2.5rem;
   }
 
   .sm\:grid-cols-2 {
