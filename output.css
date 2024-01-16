@@ -712,6 +712,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .place-items-center {
   place-items: center;
 }
@@ -1051,6 +1055,10 @@ video {
     margin-top: 10rem;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-2 {
     height: 0.5rem;
   }
@@ -1079,6 +1087,10 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:underline-offset-0 {
