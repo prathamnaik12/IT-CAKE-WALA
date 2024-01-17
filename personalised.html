@@ -2,53 +2,141 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="./output.css">
-    <title>IT CAKE WALA - Personalized cakes</title>
-    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>IT CAKE WALA</title>
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
 
-<body>
-    <nav class="bg-red-200">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between py-3">
-                <a class="text-orange-800 font-bold" href="#">IT CAKE WALA</a>
-                <button class="lg:hidden text-orange-800 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-                <div class="hidden lg:flex lg:items-center lg:w-auto">
-                    <ul class="flex items-center space-x-4 lg:space-x-8">
-                        <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
-                        <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
-                        <li class="group relative">
-                            <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
-                            <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
-                                <li><a class="block px-4 py-2" href="#">Action</a></li>
-                                <li><a class="block px-4 py-2" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="border-t border-gray-500 my-2">
-                                </li>
-                                <li><a class="block px-4 py-2" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="text-black hover:text-gray-300" href="/personalised.html"
-                                aria-disabled="true">Personalized</a></li>
-                    </ul>
-                    <form class="flex items-center ml-4" role="search">
-                        <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none"
-                            type="search" placeholder="Search" aria-label="Search">
-                        <button class="bg-green-500 text-white px-4 py-1 rounded-md ml-2" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+<body class="bg-red-100">
+  <div class="fixed top-0 w-full z-10">
+    <!-- Top bar -->
+    <div class="bg-topbar-color text-white p-2 ">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center pl-10">
+          <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
+          <span class="font-bold text-lg">IT CAKE WALA</span>
         </div>
+
+        <!-- Contact Details and Links -->
+        <div class="hidden lg:flex lg:items-center space-x-4 ml-4 md:block">
+          <span class="text-white">Call Us: +91 921 242 2000</span>
+          <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
+          <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white hidden">Enquiry Form</a>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav class="bg-red-200 filter drop-shadow-xl w-full">
+      <div class="container mx-auto px-4 flex justify-center items-center py-3">
+        <div class="lg:flex lg:items-center lg:w-auto">
+          <form class="flex items-center mr-4 " role="search">
+            <button class="bg-green-500 text-white px-4 py-1 rounded-md mr-2" type="submit">Search</button>
+            <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
+              placeholder="Search" aria-label="Search">
+          </form>
+          <ul class="flex items-center space-x-4 lg:space-x-8">
+            <li><a class="text-black hover:text-gray-300 " href="./index.html">Home</a>
+            </li>
+            <li><a class="text-black hover:text-gray-300 " href="./birthday.html">Birthday</a></li>
+            <li class="group relative">
+              <a class="text-black hover:text-gray-300 " href="./anniversary.html">Anniversary</a>
+              <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
+                <li><a class="block px-4 py-2" href="#">Action</a></li>
+                <li><a class="block px-4 py-2" href="#">Another action</a></li>
+                <li>
+                  <hr class="border-t border-gray-500 my-2">
+                </li>
+                <li><a class="block px-4 py-2" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li><a class="text-black hover:text-gray-300" href="/personalised.html"
+                aria-disabled="true">Personalized</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+  </div>
+  <div class="grid grid-cols-1 gap-3 bg-white m-40 ">
+    <div class=" box-content w-32 pl-20">
+      <h><b>CAKE FLAVOUR</b></h1>
+        <div>
+          <form>
+            <fieldset>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Chocolate</label><br>
+              <input type="radio" id="green" name="color" value="green">
+              <label for="green">Black Forest</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Butterscotch</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Pineapple</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Truffle</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Red Valvet</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Fresh Fruits</label><br>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue">Vanila Cakes</label><br>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div class=" box-content w-32 pl-20">
+      <h><b>CAKE SIZE</b></h1>
+        <div>
+          <form>
+            <fieldset>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">1/2 kg</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">1 kg</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">1.5 kg</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">2 kg</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">3 kg</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">5 kg</label><br>
+              <input class="border-2 border-grey " type="text" placeholder="Enter desired size">
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div class=" box-content w-32 pl-20">
+      <h><b>Shape</b></h1>
+        <div>
+          <form>
+            <fieldset>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Round Cake</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Star Cake</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Rectangle Cake</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Oval Cake</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Octagon Cake</label><br>
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red">Heart Cake</label><br>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div class="box-content w-full pl-20">
+      <h1><b>HOW YOU WANT YOUR CAKE</b></h1>
+      <form>
+        <textarea class="border-2 border-grey w-auto" rows="5" cols="60" placeholder="Description"></textarea>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
