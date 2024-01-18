@@ -63,15 +63,249 @@
         </nav>
     </div>
     <!-- product -Cakes order details  -->
-    <div class="mt-10 pt-40 sm:pt-20">
-        <div class="inline-flex pl-10 sm:pl-40">
-            <a class="text-black hover:text-gray-300" href="./index.html">Home</a><h1>></h1><a class="text-black hover:text-gray-300" id="navigated-pg-link" href="">_</a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <img id="product-img" src="" alt="">
+    <div class="mt-10 pt-40 sm:pt-20 bg-gray-200">
+        <div class="bg-white mt-3 filter drop-shadow-sm">
+            <div class="inline-flex pl-10 sm:pl-40">
+                <a class="text-black hover:text-gray-300" href="./index.html">Home</a><h1>></h1><a class="text-black hover:text-gray-300" id="navigated-pg-link" href="">_</a>
+            </div>
+            <div class="w-full flex flex-col items-center p-10">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+                    <img class="h-32 w-32 md:h-auto md:w-auto" id="product-img" src="" alt="cake picture">
+                    <div>
+                        <h1 class="font-sans font-medium text-xl sm:text-medium" id="product-name"></h1>
+                        <h1 class="font-medium text-6xl pt-5" id="product-price"> &#8377 </h1>
+                        <h4 class="font-thin text-gray-600">inclusive of all taxes</h4>
+                    <div class="p-2 pt-5">
+                        <h1 class="font-sans text-thin p-5 border-gray-300 border-b-2">Enter Delivery Details</h1>
+                        <div class="mb-2 grid grid-cols-1 pt-2">
+                            <label><input id="locationInput" type="text" placeholder="Enter delivery location"
+                                    class="border p-2 mr-2 flex-grow" /></label>
+                            <span class="text-lg text-gray-600 pt-5">delivery date </span><input id="datefield" type="date" min="2024-01-01"
+                                max="2024-12-31" />
+                        </div>
+                        <div class="mb-4 pt-4 grid grid-cols-2">
+                            <label class="mr-4"><input id="withEgg" type="radio" name="egg" /> With Egg <img class="h-5 w-5"
+                                    src="./images/nonveg.jpeg" alt=""></label>
+                            <label><input id="eggless" type="radio" name="eggless" /> Eggless <img class="h-5 w-5" src="./images/veg.jpeg"
+                                    alt=""></label>
+                        </div>
+                        <div class="mb-4 pt-4 grid grid-cols-1 p-4 border-gray-300 border-b-2">
+                            <h1 class="font-sans text-thin p-5">Type the message u want your cake </h1>
+                            <textarea id="messageInput" class=" pt-4" placeholder='Message On Cake' rows='1' cols='25'></textarea>
+                        </div>
+                        <div class='flex mt-4 pb-6 border-gray-300 border-b-2'>
+                            <button onclick="addToCart()"
+                                class='bg-topbar-color rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>ADD TO CART</button>
+                            <button onclick="buyNow()"
+                                class='bg-orange-400 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>BUY NOW</button>
+                        </div>
+                    </div>
+                        <div class="border-gray-300 border-b-2">
+                            <h1 class="font-sans font-bold text-large p-3">DESCRIPTION</h1>
+                            
+                        </div>
+                        <div class="border-gray-300 border-b-2 pb-4 pt-4">
+                            <h3 class="font-sans  text-gray-700 pt-2 pl-5">Product details </h3>
+                        </div>
+                        <div class="border-gray-300 border-b-2 pb-4 pt-4">
+                            <h1 class="font-sans font-bold text-large p-3">DElIVERY INFORMATION</h1>
+                            <ul class="list-disc text-sm text-gray-600 font-arial space-y-2 sm:text-xs">
+                                <li>Every cake we offer is handcrafted and since each chef has his/her own way of baking and designing a cake, there might
+                                be slight variation in the product in terms of design and shape.</li>
+                                <li>The chosen delivery time is an estimate and depends on the availability of the product and the destination to which you
+                                want the product to be delivered.</li>
+                                <li>Since cakes are perishable in nature, we attempt delivery of your order only once.</li>
+                                <li>The delivery cannot be redirected to any other address.</li>
+                                <li>This product is hand delivered and will not be delivered along with courier products.</li>
+                                <li>Occasionally, substitutions of flavours/designs is necessary due to temporary and/or regional unavailability issues.</li>
+                            </ul>
+                        </div>
+                        <div class="border-gray-300 border-b-2 pb-4 pt-4">
+                            <h1 class="font-sans font-bold text-large p-3">CARE INSTRUCTIONS</h1>
+                            <ul class="list-disc text-sm text-gray-600 font-arial space-y-2 sm:text-xs">
+                                <li>Store cream cakes in a refrigerator.</li>
+                                <li>Fondant cakes should be stored in an air conditioned environment.</li>
+                                <li>Slice and serve the cake at room temperature and make sure it is not exposed to heat.</li>
+                                <li>Use a serrated knife to cut a fondant cake.</li>
+                                <li>Sculptural elements and figurines may contain wire supports or toothpicks or wooden skewers for support.</li>
+                                <li>Please check the placement of these items before serving to small children.</li>
+                                <li>The cake should be consumed within 24 hours.</li>
+                                <li>Enjoy your cake!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- customer reviews  -->
+            <div class="bg-white mt-3 filter drop-shadow-sm">
+                <h1 class="font-sans text-2xl flex flex-col items-center p-3 font-semibold antialiased">What Customers Are Saying
+                </h1>
+                <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-3">
+                    <div class="flex flex-col items-center bg-slate-200 shadow-lg rounded-lg p-4 max-w-md mx-auto">
+                        <div class="flex items-center space-x-2">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Rachana dey</h3>
+                                <p class="text-sm text-gray-500">Ponda ,GOA</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center space-x-1">
+                            <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 20">
+                                <path
+                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 20">
+                                <path
+                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 20">
+                                <path
+                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 20">
+                                <path
+                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 22 20">
+                                <path
+                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                        </div>
+                        <p class="mt-4 text-gray-600">Delicious cakes and excellent service. Highly recommended!</p>
+                    </div>
+                <div class="flex flex-col items-center bg-slate-200 shadow-lg rounded-lg p-4 max-w-md mx-auto">
+                    <div class="flex items-center space-x-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">RAHUL Gaude</h3>
+                            <p class="text-sm text-gray-500">Margao ,GOA</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center space-x-1">
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-gray-600">Best cake shop in town. Friendly staff and amazing flavors.</p>
+                </div>
+                <div class="flex flex-col items-center bg-slate-200 shadow-lg rounded-lg p-4 max-w-md mx-auto">
+                    <div class="flex items-center space-x-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Nikhil Naik</h3>
+                            <p class="text-sm text-gray-500">Panjim ,GOA</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center space-x-1">
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 22 20">
+                            <path
+                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                    </div>
+                    <p class="mt-4 text-gray-600">I love their cakes. They are moist, fresh, and tasty.</p>
+                </div>
+            </div>
+            </div>
+            <!-- Care and handling  -->
+            <div class="bg-slate-50 rounded-lg grid grid-cols-1 gap-6 md:grid-cols-3 justify-items-center mt-3 p-10">
+                <h4 class="group ">
+                    <img class="h-20" src="./images/cake-icon.png" alt="">
+                    Get hygenic and made <br>from good ingredients <br>cakes
+                </h4>
+                <h4 class="group ">
+                    <img class="h-20" src="./images/secure-icon.png" alt="">
+                    Make the payments <br>securely we provide<br>safe payment methods
+                </h4>
+                <h4 class="group ">
+                    <img class="h-20" src="./images/helpcall-icon.png" alt="secure">
+                    Feel free to contact we are<br>here to help<br>make your birthday delightful
+                </h4>
+            </div>
+            <footer class="bg-gray-800 text-white p-8 mt-3">
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">About Us</h3>
+                            <p>IT CAKE WALA is a premier bakery company.Our bakery is renowned for crafting exquisite cakes that are
+                                not
+                                only visually stunning but also feature the latest in
+                                edible tech.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                            <ul class="list-none">
+                                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Birthday Cakes</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Anniversary Cakes</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Personalized Cakes</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Corporate Gifts</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                            <p>123 Street, City Name<br>
+            
+                                Country<br>
+                                Phone: +91 123 456 7890<br>
+                                Email: info@example.com
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                            <ul class="list-none">
+                                <li><a href="#" class="hover:text-gray-300">Facebook</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
+                                <li><a href="#" class="hover:text-gray-300">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-    <script src="product.js"> </script>
+    <script src="product.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
