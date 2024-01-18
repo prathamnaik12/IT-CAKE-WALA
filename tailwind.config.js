@@ -18,7 +18,6 @@ module.exports = {
         'pacifico': ['Pacifico', 'cursive'],
         'sans': ['Roboto', 'sans-serif'],
         'arial': ['Arial', 'sans-serif'],
-
       }
     },
   },
