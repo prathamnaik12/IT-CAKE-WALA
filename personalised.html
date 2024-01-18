@@ -61,9 +61,12 @@
       </div>
     </nav>
   </div>
-  <div class="grid grid-cols-1 gap-3 bg-white m-40 ">
-    <div class=" box-content w-32 pl-20">
-      <h><b>CAKE FLAVOUR</b></h1>
+  <div class=" bg-white m-40 flex flex-col items-center filter drop-shadow-xl">
+    <h1 class="font-bold text-2xl p-5 underline decoration-red-400">PERSONALIZED CAKES</h1>
+    <h3 class="font-pacifico p-2 pb-5">Fill Your Desired Cake Details</h3>
+    <div class=" grid grid-cols-1 gap-3 md:grid-cols-3 pl-1 pr-1">
+      <div class=" p-10 border-8 border-orange-200 filter drop-shadow-xl">
+        <h1><b>CAKE FLAVOUR</b></h1>
         <div>
           <form>
             <fieldset>
@@ -86,51 +89,52 @@
             </fieldset>
           </form>
         </div>
+      </div>
+      <div class=" p-10 border-8 border-orange-200 filter drop-shadow-xl">
+        <h><b>CAKE SIZE</b></h1>
+          <div>
+            <form>
+              <fieldset>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">1/2 kg</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">1 kg</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">1.5 kg</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">2 kg</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">3 kg</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">5 kg</label><br>
+                <input class="border-2 border-grey " type="text" placeholder="Enter desired size">
+              </fieldset>
+            </form>
+          </div>
+      </div>
+      <div class="p-10 border-8 border-orange-200 filter drop-shadow-xl">
+        <h><b>Shape</b></h1>
+          <div>
+            <form>
+              <fieldset>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Round Cake</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Star Cake</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Rectangle Cake</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Oval Cake</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Octagon Cake</label><br>
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Heart Cake</label><br>
+              </fieldset>
+            </form>
+          </div>
+      </div>
     </div>
-    <div class=" box-content w-32 pl-20">
-      <h><b>CAKE SIZE</b></h1>
-        <div>
-          <form>
-            <fieldset>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">1/2 kg</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">1 kg</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">1.5 kg</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">2 kg</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">3 kg</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">5 kg</label><br>
-              <input class="border-2 border-grey " type="text" placeholder="Enter desired size">
-            </fieldset>
-          </form>
-        </div>
-    </div>
-    <div class=" box-content w-32 pl-20">
-      <h><b>Shape</b></h1>
-        <div>
-          <form>
-            <fieldset>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Round Cake</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Star Cake</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Rectangle Cake</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Oval Cake</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Octagon Cake</label><br>
-              <input type="radio" id="red" name="color" value="red">
-              <label for="red">Heart Cake</label><br>
-            </fieldset>
-          </form>
-        </div>
-    </div>
-    <div class="box-content w-full pl-20">
+    <div class="p-3 m-2 border-8 border-orange-200 filter drop-shadow-xl">
       <h1><b>HOW YOU WANT YOUR CAKE</b></h1>
       <form>
         <textarea class="border-2 border-grey w-auto" rows="5" cols="60" placeholder="Description"></textarea>
@@ -138,5 +142,4 @@
     </div>
   </div>
 </body>
-
 </html>
