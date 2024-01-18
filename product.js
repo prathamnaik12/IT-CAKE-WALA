@@ -172,5 +172,181 @@ let CakeData = [
     description: "", // You can fill this value
     src: "./images/heavenly-butterscotch-cream-cake-half-kg-eggless_2.webp",
     name: "Heavenly Butterscotch Cream Cake Half kg"
+  },
+  {
+    id: "Blue_web",
+    price: 500,
+    size: "", 
+    description: "", 
+    src: "./images/Blue_web.webp",
+    name: "Blue vanila flaboured 1 kg"
+  },
+  {
+    id: "Flowers-N-Cakes",
+    price: 1499,
+    size: "", 
+    description: "", 
+    src: "./images/Flowers-N-Cakes_web.webp",
+    name: "Flowers N Cakes"
+  },
+  {
+    id: "fudge-brownie-cake-half-kg",
+    price: 675,
+    size: "", 
+    description: "", 
+    src: "./images/fudge-brownie-cake-half-kg_1.webp",
+    name: "fudge brownie cake half kg"
+  },
+  {
+    id: "50th-anniversary-fondant-2-tier-cake-chocolate-3kg",
+    price: 3499,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/50th-anniversary-fondant-2-tier-cake-chocolate-3kg_1.webp",
+    name: "anniversary fondant 2 tier cake chocolate 3kg"
+  },
+  {
+    id: "anniversary-special-chocolate-cake-half-kg",
+    price: 725,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/anniversary-special-chocolate-cake-half-kg_1.webp",
+    name: "anniversary special chocolate cake half kg"
+  },
+  {
+    id: "butterscotch-bliss-eggless-cake",
+    price: 1275,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/butterscotch-bliss-eggless-cake_1.webp",
+    name: "butterscotch bliss eggless cake"
+  },
+  {
+    id: "choco-hearts-love-designer-cake-half-kg",
+    price: 725,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/choco-hearts-love-designer-cake-half-kg_5.webp",
+    name: "choco hearts love designer cake half kg"
+  },
+  {
+    id: "chocolate-caramel-fudge-cake-half-kg",
+    price: 625,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/chocolate-caramel-fudge-cake-half-kg_1.webp",
+    name: "chocolate caramel fudge cake half kg"
+  },
+  {
+    id: "decadent-floral-chocolate-cake-1-kg",
+    price: 1699,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/decadent-floral-chocolate-cake-1-kg_1.webp",
+    name: "decadent floral chocolate cake 1 kg"
+  },
+  {
+    id: "delicious-heart-shaped-chocolate-cake-half-kg",
+    price: 750,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/delicious-heart-shaped-chocolate-cake-half-kg_1.webp",
+    name: "delicious heart shaped chocolate cake half kg"
+  },
+  {
+    id: "happy-anniversary-heart-shaped-cake-half-kg",
+    price: 799,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/happy-anniversary-heart-shaped-cake-half-kg_1.webp",
+    name: "happy anniversary heart shaped cake half kg"
+  },
+  {
+    id: "heart-shaped-cream-chocolate-cake-half-kg",
+    price: 675,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/heart-shaped-cream-chocolate-cake-half-kg_2.webp",
+    name: "heart shaped cream chocolate cake half kg"
+  },
+  {
+    id: "heart-shaped-pineapple-cake-half-kg",
+    price: 1499,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/heart-shaped-pineapple-cake-half-kg_1.webp",
+    name: "heart shaped pineapple cake half kg"
+  },
+  {
+    id: "joyful-bento-chocolate-temptation",
+    price: 1725,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/joyful-bento-chocolate-temptation_1.webp",
+    name: "joyful bento chocolate temptation"
+  },
+  {
+    id: "love-special-chocolate-photo-cake-half-kg",
+    price: 1075,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/love-special-chocolate-photo-cake-half-kg_1.webp",
+    name: "love special chocolate photo cake half kg"
+  },
+  {
+    id: "lovely-red-roses-around-chocolate-cake-half-kg",
+    price: 925,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/lovely-red-roses-around-chocolate-cake-half-kg_1.webp",
+    name: "lovely red roses around chocolate cake half kg"
+  },
+  {
+    id: "peach-roses-truffle-2-tier-cake-15-kg",
+    price: 6250,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/peach-roses-truffle-2-tier-cake-15-kg_1.webp",
+    name: "peachroses truffle 2 tier cake 15 kg"
+  },
+  {
+    id: "red-velvet-heart-cake-half-kg",
+    price: 599,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/red-velvet-heart-cake-half-kg_1.webp",
+    name: "red velvet heart cake half kg"
+  },
+  {
+    id: "rose-paradise-chocolate-cake-half-kg",
+    price: 925,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/rose-paradise-chocolate-cake-half-kg_1.webp",
+    name: "rose paradise chocolate cake half kg"
+  },
+  {
+    id: "roses-on-heart-designer-cake-half-kg",
+    price: 1250,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/roses-on-heart-designer-cake-half-kg_1.webp",
+    name: "roses on heart designer cake half kg"
+  },
+  {
+    id: "special-hearts-truffle-fondant-cake-1-kg",
+    price: 999,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/special-hearts-truffle-fondant-cake-1-kg_1.webp",
+    name: "special hearts truffle fondant cake 1 kg"
+  },
+  {
+    id: "sweetheart-chocolate-cream-rose-cake-15-kg",
+    price: 2999,
+    size: "", 
+    description: "", 
+    src: "./images/anniversary/sweetheart-chocolate-cream-rose-cake-15-kg_1.webp",
+    name: "sweetheart chocolate cream rose cake 5 kg"
   }
 ];
