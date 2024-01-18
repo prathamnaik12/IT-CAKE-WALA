@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   if (window.location.pathname === '/product.html') {
     let navigatedPGlink = document.referrer;
+    console.log('Referrer:', navigatedPGlink);
     let link = document.getElementById("navigated-pg-link");
     let fileName = navigatedPGlink.split('/').pop().replace('.html', '');
     link.href = navigatedPGlink;
