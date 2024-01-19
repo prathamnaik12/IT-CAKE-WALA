@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>IT CAKE WALA</title>
   <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
@@ -27,6 +28,11 @@
           <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
           <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white hidden">Enquiry Form</a>
         </div>
+        <div class="block absolute right-6 w-8 h-8 bg-white rounded-lg filter drop-shadow-xl md:hidden ">
+          <a href="cart.html" class="p-2">
+            <i class="fa fa-shopping-cart text-lime-900" style="font-size:18px;"></i>
+          </a>
+        </div>   
       </div>
     </div>
     <!-- navbar -->
@@ -59,12 +65,117 @@
                 aria-disabled="true">Personalized</a>
             </li>
           </ul>
+          <div class="hidden absolute right-6 md:block">
+            <a href="cart.html">
+              <i class="fa fa-shopping-cart text-lime-900" style="font-size:36px;"></i>
+            </a>
+          </div>    
         </div>
       </div>
     </nav>
 </div>
-  <div class="mt-40 bg-white m-2 md:m-40 filter drop-shadow-xl p-40">
-<h1>ffrgrt</h1>
+<div class="container p-8 mx-auto mt-40 bg-white filter drop-shadow-xl border-8 border-red-100">
+  <div class="w-full overflow-x-auto">
+      <div class="my-2">
+          <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
+      </div>
+      <table class="w-full shadow-inner border-4 border-gray-200">
+          <thead>
+              <tr class="bg-gray-100 bg-green-100">
+                  <th class="px-6 py-3 font-bold whitespace-nowrap font-arial">Product</th>
+                  <th class="px-6 py-3 font-bold whitespace-nowrap">Qty</th>
+                  <th class="px-6 py-3 font-bold whitespace-nowrap">Price</th>
+                  <th class="px-6 py-3 font-bold whitespace-nowrap">Remove</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="p-4 px-6 text-center whitespace-nowrap" id="product-name">Product 1</td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <div>
+                          <button class="px-2 py-0 shadow">-</button>
+                          <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none" id="product-qty">
+                          <button class="px-2 py-0 shadow">+</button>
+                      </div>
+                  </td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap" id="product-price">$99.99</td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
+                  </td>
+              </tr>
+              <tr class="hidden">
+                  <td class="p-4 px-6 text-center whitespace-nowrap">Product 2</td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <div>
+                          <button class="px-2 py-0 shadow">-</button>
+                          <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
+                          <button class="px-2 py-0 shadow">+</button>
+                      </div>
+                  </td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">$49.99</td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
+                  </td>
+              </tr>
+              <tr class="hidden">
+                <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
+                <td class="p-4 px-6 text-center whitespace-nowrap">
+                    <div>
+                        <button class="px-2 py-0 shadow">-</button>
+                        <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
+                        <button class="px-2 py-0 shadow">+</button>
+                    </div>
+                </td>
+                <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
+                <td class="p-4 px-6 text-center whitespace-nowrap">
+                    <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
+                </td>
+            </tr>
+            <tr class="hidden">
+              <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
+              <td class="p-4 px-6 text-center whitespace-nowrap">
+                  <div>
+                      <button class="px-2 py-0 shadow">-</button>
+                      <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
+                      <button class="px-2 py-0 shadow">+</button>
+                  </div>
+              </td>
+              <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
+              <td class="p-4 px-6 text-center whitespace-nowrap">
+                  <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
+              </td>
+          </tr>
+          <tr class="hidden">
+            <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
+            <td class="p-4 px-6 text-center whitespace-nowrap">
+                <div>
+                    <button class="px-2 py-0 shadow">-</button>
+                    <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
+                    <button class="px-2 py-0 shadow">+</button>
+                </div>
+            </td>
+            <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
+            <td class="p-4 px-6 text-center whitespace-nowrap">
+                <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
+            </td>
+        </tr>
+              <tr>
+                  <td class="p-4 px-6 text-center whitespace-nowrap"></td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <div class="font-bold">Total Qty - 2</div>
+                  </td>
+                  <td class="p-4 px-6 font-extrabold text-center whitespace-nowrap">Total - $149.98</td>
+                  <td class="p-4 px-6 text-center whitespace-nowrap">
+                      <button class="px-4 py-1 text-red-600 bg-red-100">Clear All</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <div class="flex justify-end mt-4 space-x-2">
+          <button class="px-6 py-3 text-sm text-gray-800 bg-gray-200 hover:bg-gray-400">Cancel</button>
+          <button class="px-6 py-3 text-sm text-white bg-indigo-500 hover:bg-indigo-600">Proceed to Checkout</button>
+      </div>
   </div>
+</div>
 </body>
 </html>
