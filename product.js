@@ -31,12 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
-const slider = document.querySelector('.testimonial-slider');
-const testimonials = document.querySelectorAll('.testimonial-item');
-let index = 0;
+    const slider = document.querySelector('.testimonial-slider');
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    let index = 0;
 
-function addToCart() {
-        saveFormData('cart');
+    function addToCart() {
+      saveFormData('cart');
+      localStorage.setItem('product_name',productNametxt)
+      localStorage.setItem('product_price',productPricetxt)
+      localStorage.setItem('product_qty',1)
     }
 
     function buyNow() {
