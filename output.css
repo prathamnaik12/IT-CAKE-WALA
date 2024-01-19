@@ -1324,6 +1324,10 @@ video {
   .md\:gap-8 {
     gap: 2rem;
   }
+
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
