@@ -4,7 +4,7 @@ let productqty = document.getElementById("product-qty")
 
 let cartbtn = document.getElementById("cart")
 
-cartbtn.addEventListener('onclick',function(){
+cartbtn.addEventListener('click',function(){
     let addedProductName = localStorage.getItem('product_name')
     let addedProductprice = localStorage.getItem('product_price')
     let addedProductqty = localStorage.getItem('product_qty')
