@@ -1,3 +1,60 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the clicked flavour id from localStorage
+  let clickedFlavourId = localStorage.getItem('clickedFlavourId');
+
+  if (clickedFlavourId) {
+    console.log("Clicked Flavor Id:", clickedFlavourId);
+
+    // Filter cakes based on the clicked flavour id
+    let flavorCakes = flavourCakedata.filter(cake => cake.flavourId === clickedFlavourId);
+
+    // Get the cakes container element
+    let cakesContainer = document.getElementById("cakes");
+
+    // Check if there are cakes for the selected flavor
+    if (flavorCakes.length > 0) {
+      flavorCakes.forEach(cake => {
+        // Create a div for each cake
+        let subDiv = document.createElement("div");
+        subDiv.className = "p-3 md:p-10 bg-white"; // Customize the class name and styling
+
+        // Create a link for each cake
+        let linkElement = document.createElement("a");
+        linkElement.href = "./product.html"; // You need to provide the correct URL
+        linkElement.id = cake.id; // Assigning cake ID as the link ID
+
+        // Create and append image element
+        let imgElement = document.createElement("img");
+        imgElement.src = cake.src; // You need to provide the correct image URL
+        imgElement.alt = cake.name;
+        imgElement.className = "rounded-lg border-4 border-black/25"; // Add additional styling if needed
+        linkElement.appendChild(imgElement);
+
+        // Create and append h3 element for name
+        let h3Element = document.createElement("h3");
+        h3Element.textContent = cake.name;
+        h3Element.className = "p-2"; // Add additional styling if needed
+        linkElement.appendChild(h3Element);
+
+        // Create and append h1 element for price
+        let h1Element = document.createElement("h1");
+        h1Element.textContent = `₹${cake.price}`; // Use the correct currency symbol
+        h1Element.className = "font-bold pl-5"; // Add additional styling if needed
+        linkElement.appendChild(h1Element);
+
+        // Append the link to the sub div
+        subDiv.appendChild(linkElement);
+
+        // Append the sub div to the main container
+        cakesContainer.appendChild(subDiv);
+      });
+    } else {
+      console.log("No cakes found for the selected flavor");
+    }
+  } else {
+    console.log("No flavor id found");
+  }
+});
 
 let flavourCakedata=[
       { //butterscotch
