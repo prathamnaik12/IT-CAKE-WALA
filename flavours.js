@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 function generateProductCards(selectedFlavorId) {
 
   productContainer.innerHTML = "";
