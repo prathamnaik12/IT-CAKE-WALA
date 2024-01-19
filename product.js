@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.log("No product id found");
   }
-  localStorage.removeItem('clickedProductId');
   let productData = CakeData.find(product => product.id === clickedProductId);
 
   if (productData) {
