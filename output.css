@@ -1313,8 +1313,16 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:m-40 {
+    margin: 10rem;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-auto {
