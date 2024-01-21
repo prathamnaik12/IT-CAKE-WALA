@@ -856,8 +856,8 @@ video {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.overflow-y-scroll {
-  overflow-y: scroll;
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-y-scroll {
@@ -1006,11 +1006,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .bg-red-400 {
