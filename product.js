@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       saveFormData('cart');
       localStorage.setItem('product_name',productNametxt)
       localStorage.setItem('product_price',productPricetxt)
+      localStorage.setItem('product_img', productImg)
       localStorage.setItem('product_qty',1)
     }
 
