@@ -3,66 +3,44 @@ const productContainer = document.getElementById("cakes");
 if (!productContainer) {
     console.error("Product container not found");
 } else {
-    console.log("Product container found:", productContainer);
-}
+  console.log("Product container found:", productContainer);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const flavorLinks = document.querySelectorAll(".group");
-
-  flavorLinks.forEach(link => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const selectedFlavorId = link.dataset.flavourId;
-      localStorage.setItem('flavourIDclicked', selectedFlavorId);
-      console.log('Flavor ID:', selectedFlavorId);
-      generateProductCards(selectedFlavorId);
-    });
-  });
+  document.addEventListener("DOMContentLoaded", function () {
+  let flavour = localStorage.getItem('selectedFlavourId');
+  console.log('Retrieved Flavor Id from localStorage:', flavour);
+  generateProductCards(flavour);
 });
+}
+function generateProductCards(selectedFlavourId) {
+  const selectedCakes = flavourCakedata.filter(cake => cake.flavourId === selectedFlavourId);
 
-function generateProductCards(selectedFlavorId) {
+  for (let i = 0; i < 6; i++) {
+    var currentDiv = document.getElementById(`cake${i + 1}`);
+    
+    if (i < selectedCakes.length) {
+      var selectedCake = selectedCakes[i];
 
-  productContainer.innerHTML = "";
+      var aTag = currentDiv.querySelector("a");
+      var h3Tag = currentDiv.querySelector("h3");
+      var h1Tag = currentDiv.querySelector("h1");
+      var img = currentDiv.querySelector("img");
 
-  const selectedFlavorData = flavourCakedata.filter(item => item.flavourId === selectedFlavorId);
-
-  if (selectedFlavorData.length === 0) {
-    console.error("No data available for selected flavor ID:", selectedFlavorId);
-    return;
+      img.src = selectedCake.src;
+      aTag.id = selectedCake.id;
+      h3Tag.textContent = selectedCake.name;
+      h1Tag.textContent = selectedCake.price;
+    }
   }
 
-  selectedFlavorData.forEach(product => {
-    const productCard = document.createElement("div");
-    productCard.classList.add("product-card", "bg-white", "rounded-lg", "m-5", "p-7", "place-items-center");
-
-    const productImg = document.createElement("img");
-    productImg.src = product.src; 
-    productImg.alt = product.name;
-    productImg.classList.add("w-full-object-cover", "rounded-lg", "transition-transform", "duration-300", "transform", "hover:scale-105", "hover:shadow-lg", "hover:z-10");
-
-    const productName = document.createElement("h3");
-    productName.textContent = product.name;
-    productName.classList.add("font-pacifico", "font-thin", "p-2", "text-lg");
-
-    const productPrice = document.createElement("p");
-    productPrice.textContent = `Price: $${product.price}`;
-    productPrice.classList.add("font-pacifico", "font-thin", "p-2", "text-lg");
-
-    productCard.appendChild(productImg);
-    productCard.appendChild(productName);
-    productCard.appendChild(productPrice);
-    productContainer.appendChild(productCard);
-  });
+  document.body.removeAttribute('loading');
 }
 
-
-
-let flavourCakedata=[
+const flavourCakedata=[
       { //butterscotch
         id:"Heavenly-Butterscotch-Cake-Half-Kg",
         name:"Heavenly Butterscotch Cake- Half Kg",
         price:725,
-        src: "",
+        src: "./images/butterscotch/heavenly-butterscotch-cake-half-kg_1.webp",
         Flavour:"Butterscotch",
         flavourId:"butterscotch",
         TypeofCake:"Cream",
@@ -75,7 +53,7 @@ let flavourCakedata=[
         id:"Butterscotch-Cake-With-Rasmalai-1-kg",
         name:"Butterscotch Cake With Rasmalai 1kg", 
         price:1375,
-        src: "",
+        src: "./images/butterscotch/butterscotch-cake-with-rasmalai-1kg_1.webp",
         Flavour:"Butterscotch With Rasmalai",
         flavourId:"butterscotch",
         TypeofCake:"Cream",
@@ -88,7 +66,7 @@ let flavourCakedata=[
         id:"Crunchy-Butterscotch-Cake-Half-Kg",
         name:"Crunchy Butterscotch Cake Half Kg",
         price:575,
-        src: "",
+        src: "./images/butterscotch/crunchy-butterscotch-cream-cake-half-kg_1.webp",
         Flavour:"Butterscotch",
         flavourId:"butterscotch",
         TypeofCake:"Cream",
@@ -101,7 +79,7 @@ let flavourCakedata=[
         id:"Heart-Shaped-Butterscotch-Cake-Half-Kg",
         name:"Heart Shaped Butterscotch Cake Half Kg",
         price:725,
-        src: "",
+        src: "./images/butterscotch/heart-shaped-butterscotch-cake-half-kg_1.webp",
         Flavour:"Butterscotch",
         flavourId:"butterscotch",
         TypeofCake:"Cream",
@@ -114,7 +92,7 @@ let flavourCakedata=[
         id:"Butterscotch-Bento-Cake-250-Gram",
         name:"Butterscotch Bento Cake 250 Gram",
         price:449,
-        src:"" ,
+        src:"./images/butterscotch/butterscotch-symphony-cream-cake_1.webp" ,
         Flavour:"Butterscotch",
         flavourId:"butterscotch",
         Weight:"250 gms",
@@ -127,7 +105,7 @@ let flavourCakedata=[
         id:"Honey-Bee-Butterscotch-Cake-1-Kg",
         name:"Honey Bee Butterscotch Cake 1 Kg",
         price:1375,
-        src: "",
+        src: "./images/butterscotch/honey-bee-butterscotch-cake-half-kg_1.webp",
         Flavour:"Butterscotch",
         flavourId:"butterscotch",
         TypeofCake:"Cream",
@@ -140,7 +118,7 @@ let flavourCakedata=[
         id:"Fudge-Brownie-Cake-1-kg",
         name:"Fudge Brownie Cake 1 kg",
         price:1275,
-        src: "",
+        src: "./images/chocolate",
         Flavour:"Truffle",
         flavourId:"chocolate",
         Weight:"1 Kg",
@@ -152,7 +130,7 @@ let flavourCakedata=[
         id:"Kit-Kat-Crunch-Cream-Cake-Half-Kg",
         name:"Kit Kat Crunch Cream Cake Half Kg",
         price:675,
-        src: "",
+        src: "./images/chocolate/kit-kat-crunch-cream-cake-half-kg_1.webp",
         Weight:"Half Kg",
         Flavour:"Kit Kat",
         flavourId:"chocolate",
@@ -166,7 +144,7 @@ let flavourCakedata=[
         id:"Dark-Chocolate-Cream-Delight-1-Kg",
         name:"Dark Chocolate Cream Delight 1 Kg",
         price:1275,
-        src: "",
+        src: "./images/chocolate/dark-chocolate-cream-delight-half-kg_1.webp",
         Weight:"1 Kg",
         Flavour:"Chocolate Cream",
         flavourId:"chocolate",
@@ -180,7 +158,7 @@ let flavourCakedata=[
         id:"Chocolate-Caramel-Fudge-Cake-2-Kg",
         name:"Chocolate Caramel Fudge Cake 2 Kg",
         price:2325,
-        src: "",
+        src: "./images/chocolate/chocolate-caramel-fudge-cake-half-kg_2.webp",
         Flavour:"Caramel",
         flavourId:"chocolate", 
         TypeofCake:"Cream Cake",
@@ -193,7 +171,7 @@ let flavourCakedata=[
         id:"Creamy-Chocolate-Dream-Cake-Half-Kg",
         name:"Creamy Chocolate Dream Cake Half Kg",
         price:675,
-        src: "",
+        src: "./images/chocolate/creamy-chocolate-dream-cake-half-kg_1.webp",
         Weight:"Half Kg",
         Flavour:"Chocolate Cream",
         flavourId:"chocolate",
@@ -207,7 +185,7 @@ let flavourCakedata=[
         id:"Delicious-Heart-Shaped-Chocolate-Cake-1-Kg",
         name:"Delicious Heart Shaped Chocolate Cake 1 Kg",
         price:1375,
-        src: "",
+        src: "./images/chocolate/delicious-heart-shaped-chocolate-cake-half-kg_1.webp",
         Flavour:"Chocola",
         flavourId:"chocolate",
         TypeOfCake:"Cream",
@@ -220,7 +198,7 @@ let flavourCakedata=[
         id:"Happy-Emoji-Pineapple-Cake-Eggless-Half-Kg",
         name:"Happy Emoji Pineapple Cake Eggless Half Kg",
         price:625,
-        src: "",
+        src: "./images/pineapple/happy-emoji-pineapple-cake-eggless-half-kg_1.webp",
         Flavour:"Pineapple",
         flavourId:"pineapple",
         Version:"Eggless",
@@ -234,7 +212,7 @@ let flavourCakedata=[
         id:"Tropical-Bliss-Pineapple-Bento-250-Gram",
         name:"Tropical Bliss Pineapple Bento 250 Gram",
         price:449,
-        src: "",
+        src: "./images/pineapple/delicious-pineapple-cream-cake-eggless-half-kg_1.webp",
         Flavour:"Pineapple",
         flavourId:"pineapple",
         Weight:"250 gms",
@@ -247,7 +225,7 @@ let flavourCakedata=[
         id:"Roses-On-Top-Pineapple-Designer-Cake-Half-Kg-Eggless",
         name:"Roses On Top Pineapple Designer Cake Half Kg Eggless",
         price:725,
-        src: "",
+        src: "./images/pineapple/roses-on-top-pineapple-designer-cake-half-kg-eggless_1.webp",
         Flavour:"Pineapple",
         flavourId:"pineapple",
         Version:"Eggless",
@@ -261,7 +239,7 @@ let flavourCakedata=[
         id:"Pink-Pineapple-Cream-Cake-1-Kg-Eggless",
         name:"Pink Pineapple Cream Cake 1 Kg Eggless",
         price:1375,
-        src:"",
+        src:"./images/pineapple/pink-pineapple-cream-cake-half-kg-eggless_1.webp",
         Flavour:"Pineapple",
         flavourId:"pineapple",
         Version:"Eggless",
@@ -275,7 +253,7 @@ let flavourCakedata=[
         id:"Delicious-Pineapple-Cake-Half-Kg-Eggless",
         name:"Delicious Pineapple Cake Half Kg Eggless",
         price:625,
-        src:"",
+        src:"./images/pineapple/delicious-pineapple-cake-half-kg-eggless_1.webp",
         Flavour:"Pineapple",
         flavourId:"pineapple",
         Version:"Eggless",
@@ -289,7 +267,7 @@ let flavourCakedata=[
         id:"Pineapple-With-Butterscotch-Cake-Eggless-2-Kg",
         name:"Pineapple With Butterscotch Cake Eggless 2 Kg",
         price:2675,
-        src:"",
+        src:"./images/pineapple/pineapple-paradise-cake_1.webp",
         Flavour:"Pineapple With Butterscotch",
         flavourId:"pineapple",
         Version:"Eggless",
@@ -304,7 +282,7 @@ let flavourCakedata=[
         id:"Fresh-Vanilla-Cake-1-Kg",
         name:"Fresh Vanilla Cake 1 Kg",
         price:1099,
-        src:"",
+        src:"./images/Vanila_cakes/fresh-vanilla-cake-1kg_1.webp",
         Flavour:"Vanilla",
         flavourId:"vanila",
         TypeofCake:"Cream",
@@ -317,7 +295,7 @@ let flavourCakedata=[
         id:"Vanilla-Bliss-in-Pink-1-Kg",
         name:"Vanilla Bliss in Pink 1 Kg",
         price:1175,
-        src:"",
+        src:"./images/Vanila_cakes/vanilla-bliss-in-pink-1-kg_1.webp",
         Weight:"1 Kg",
         Flavour:"Vanilla",
         flavourId:"vanila",
@@ -330,7 +308,7 @@ let flavourCakedata=[
         id:"Luscious-Vanilla-Cake-Half-Kg",
         name:"Luscious Vanilla Cake Half Kg",
         price:625,
-        src:"",
+        src:"./images/Vanila_cakes/luscious-vanilla-cake-half-kg_1.webp",
         Weight:"Half Kg",
         Flavour:"Vanilla",
         flavourId:"vanila",
@@ -343,7 +321,7 @@ let flavourCakedata=[
         id:"Rose-Fondant-Cake-Vanilla-5-kg",
         name:"Rose Fondant Cake Vanilla 5 kg",
         price:9425,
-        src:"",
+        src:"./images/Vanila_cakes/rose-fondant-cake-vanilla-4kg_1.webp",
         Flavour:"Vanilla",
         flavourId:"vanila",
         Weight:"5kg",
@@ -355,7 +333,7 @@ let flavourCakedata=[
         id:"Flamboyant-Barbie-Cake-Vanilla-3-kg",
         name:"Flamboyant Barbie Cake Vanilla 3 kg",
         price:4025,
-        src:"",
+        src:"./images/Vanila_cakes/flamboyant-barbie-cake-vanilla-2kg_1.webp",
         Flavour:"Vanilla",
         flavourId:"vanila",
         Typeofcake:"Cream",
@@ -365,10 +343,10 @@ let flavourCakedata=[
         Size:"12 inches in Diameter"
       },
       {
-        id:"Blue-Shirt-Fondant-Cake-3kg-Vanilla",
-        name:"Blue Shirt Fondant Cake 3kg Vanilla",
+        id:"vanilla-cake-with-gulab-jamun-2kg",
+        name:"Vanilla cake with gulab jamun 2kg",
         price:5225,
-        src:"",
+        src:"./images/Vanila_cakes/vanilla-cake-with-gulab-jamun-2kg_1.webp",
         Flavour:"Vanilla",
         flavourId:"vanila",
         TypeofCake:"Fondant",
@@ -381,7 +359,7 @@ let flavourCakedata=[
         id:"Fresh-Fruit-Vanilla-Cake-1-Kg",
         name:"Fresh Fruit Vanilla Cake 1 Kg",
         price:1575,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/fresh-fruit-vanilla-cake-1-kg_1.webp",
         Flavour:"Fresh Fruit Vanilla",
         flavourId:"fresh-fruit",
         TypeofCake:"Cream",
@@ -394,7 +372,7 @@ let flavourCakedata=[
         id:"Fruit-Fantasy-Cake",
         name:"Fruit Fantasy Cake",
         price:2275,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/fruit-fantasy-cake_1.webp",
         Typeofcake:"Cream cake",
         Flavour:"Mix fruit",
         flavourId:"fresh-fruit",
@@ -408,7 +386,7 @@ let flavourCakedata=[
         id:"Fruit-Chocolate-Cake-1-kg",
         name:"Fruit Chocolate Cake 1 kg",
         price:1575,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/chocolate-fruit-gateau-2kg_1.webp",
         Flavour:"Chocolate",
         flavourId:"fresh-fruit",
         TypeofCake :"Cream",
@@ -421,7 +399,7 @@ let flavourCakedata=[
         id:"Fresh-Vanilla-Cake-1-Kg",
         name:"Fresh Vanilla Cake 1 Kg",
         price:1099,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/fresh-pineapple-dream-cake-half-kg-eggless_2.webp",
         Flavour:"Vanilla",
         flavourId:"fresh-fruit",
         TypeofCake:"Cream",
@@ -434,7 +412,7 @@ let flavourCakedata=[
         id:"Fruit-Carnival-Cake-For-Diwali-3-Kg",
         name:"Fruit Carnival Cake For Diwali 3 Kg",
         price:2425,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/fruit-carnival-cake-for-diwali-2kg_1.webp",
         Flavour:"Mix fruit",
         flavourId:"fresh-fruit",
         Weight:"3Kg",
@@ -448,7 +426,7 @@ let flavourCakedata=[
         id:"Creamy-Vanilla-Fruit-Cake-1-Kg",
         name:"Creamy Vanilla Fruit Cake 1 Kg",
         price:1575,
-        src:"",
+        src:"./images/Fresh_Fruits_cakes/creamy-vanilla-fruit-cake-1kg_1.webp",
         Flavour:"Vanilla",
         flavourId:"fresh-fruit",
         TypeofCake:"Cream",
@@ -461,7 +439,7 @@ let flavourCakedata=[
         id:"Red-Velvet-Celebration-Cake",
         name:"Red Velvet Celebration Cake",
         price:2325,
-        src:"",
+        src:"./images/Red_Valvet_cakes/red-velvet-celebration-cake_2.webp",
         Typeofcake:"Cream cake",
         Weight:"2 Kg",
         Shape:"Round",
@@ -475,7 +453,7 @@ let flavourCakedata=[
         id:"Royal-Red-Velvet-Cake",
         name:"Royal Red Velvet Cake",
         price:725,
-        src:"",
+        src:"./images/Red_Valvet_cakes/royal-red-velvet-cake_1.webp",
         Flavour:"Red velvet",
         flavourId:"red-valvet",
         Weight:"500 gms",
@@ -488,7 +466,7 @@ let flavourCakedata=[
         id:"Red-Velvet-Gems-Cake-Half-Kg",
         name:"Red Velvet Gems Cake Half Kg",
         price:875,
-        src:"",
+        src:"./images/Red_Valvet_cakes/red-velvet-gems-cake-half-kg_1.webp",
         Flavour:"Red Velvet",
         flavourId:"red-valvet",
         TypeofCake:"Cream",
@@ -501,7 +479,7 @@ let flavourCakedata=[
         id:"Red-Velvet-Heart-Cake-1.5-kg",
         name:"Red Velvet Heart Cake 1.5 kg",
         price:2275,
-        src:"",
+        src:"./images/Red_Valvet_cakes/red-velvet-heart-cake-3kg_1.webp",
         Flavour:"Red Velvet",
         flavourId:"red-valvet",
         TypeofCake:"Cream",
@@ -514,7 +492,7 @@ let flavourCakedata=[
         id:"Scrumptious-Red-Velvet-Cake-2-Kg",
         name:"Scrumptious Red Velvet Cake 2 Kg",
         price:3275,
-        src:"",
+        src:"./images/Red_Valvet_cakes/scrumptious-red-velvet-cake-half-kg_1.webp",
         Flavour:"Red Velvet",
         flavourId:"red-valvet",
         TypeofCake:"Cream",
@@ -527,7 +505,7 @@ let flavourCakedata=[
         id:"Red-Velvet-Heart-Cream-Cake-1-Kg",
         name:"Red Velvet Heart Cream Cake 1 Kg",
         price:1474,
-        src:"",
+        src:"./images/Red_Valvet_cakes/red-velvet-serenity_1.webp",
         Flavour:"Red Velvet",
         flavourId:"red-valvet",
         TypeofCake:"Cream",
@@ -540,7 +518,7 @@ let flavourCakedata=[
         id:"Truffle-Dream-Cake",
         name:"Truffle Dream Cake",
         price:725,
-        src:"",
+        src:"./images/Truffle_cakes/truffle-dream-cake_1.webp",
         Typeofcake:"Cream cake",
         Weight:"Half kg",
         Shape:"Round",
@@ -554,7 +532,7 @@ let flavourCakedata=[
         id:"Velvet-Truffle-Cake",
         name:"Velvet Truffle Cake",
         price:725,
-        src:"",
+        src:"./images/Truffle_cakes/velvet-truffle-cake_1.webp",
         Flavour:"Truffle",
         flavourId:"truffle",
         Weight:"500 gms",
@@ -567,7 +545,7 @@ let flavourCakedata=[
         id:"Glistening-Truffle-Cake-2-KG",
         name:"Glistening Truffle Cake 2 KG",
         price:2675,
-        src:"",
+        src:"./images/Truffle_cakes/glistening-truffle-cake-2kg_1.webp",
         Flavour:"Truffle",
         flavourId:"truffle",
         Weight:"2 Kg",
@@ -579,7 +557,7 @@ let flavourCakedata=[
         id:"Chocolaty-Truffle-Cake-1.5-Kg",
         name:"Chocolaty Truffle Cake 1.5 Kg",
         price:1575,
-        src:"",
+        src:"./images/Truffle_cakes/superhero-truffle-treat_1.webp",
         Flavour:"Chocolate",
         flavourId:"truffle",
         TypeofCake:"Cream",
@@ -592,7 +570,7 @@ let flavourCakedata=[
         id:"Whimsical-Truffle-Temptation",
         name:"Whimsical Truffle Temptation",
         price:5225,
-        src:"",
+        src:"./images/Truffle_cakes/truffle-delight-for-dad_1.webp",
         Typeofcake:"Fondant",
         flavourId:"truffle",
         Flavour:"Truffle",
@@ -604,7 +582,7 @@ let flavourCakedata=[
         id:"Creamy-Truffle-Cake-1-Kg",
         name:"Creamy Truffle Cake 1 Kg",
         price:1375,
-        src:"",
+        src:"./images/Truffle_cakes/truffle-dream-cake_1.webp",
         Weight:"1 Kg",
         Flavour:"Truffle",
         flavourId:"truffle",
@@ -618,7 +596,7 @@ let flavourCakedata=[
         id:"Black-Forest-Cake-Half-kg-Eggless",
         name:"Black Forest Cake Half kg Eggless",
         price:599,
-        src:"",
+        src:"./images/Black_Forest/black-forest-cake-half-kg-eggless_2.webp",
         Weight:"1/2 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",
@@ -632,7 +610,7 @@ let flavourCakedata=[
         id:"Ambrosial-Black-Forest-Cake-1kg",
         name:"Ambrosial Black Forest Cake 1kg",
         price:1299,
-        src:"",
+        src:"./images/Black_Forest/ambrosial-black-forest-cake-2kg_1.webp",
         Weight:"1 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",
@@ -646,7 +624,7 @@ let flavourCakedata=[
         id:"Black-Forest-Bliss",
         name:"Black Forest Bliss",
         price:799,
-        src:"",
+        src:"./images/Black_Forest/black-forest-bliss-cake_1.webp",
         Weight:"1/2 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",
@@ -660,7 +638,7 @@ let flavourCakedata=[
         id:"Rose-Fondant-Cake-Black-Forest-4kg",
         name:"Rose Fondant Cake Black Forest 4kg",
         price:7299,
-        src:"",
+        src:"./images/Black_Forest/rose-fondant-cake-black-forest-4kg_1.webp",
         Weight:"4 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",
@@ -674,7 +652,7 @@ let flavourCakedata=[
         id:"Round-Black-Forest-Photo-Cake-Half-Kg",
         name:"Round Black Forest Photo Cake Half Kg",
         price:1099,
-        src:"",
+        src:"./images/Black_Forest/round-black-forest-photo-cake-1kg_1.webp",
         Weight:"1 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",
@@ -688,7 +666,7 @@ let flavourCakedata=[
         id:"royal-black-forest-cake-half-kg",
         name:"Royal Black ForestCake Half Kg",
         price:699,
-        src:"",
+        src:"./images/Black_Forest/royal-black-forest-cake_1.webp",
         Weight:"1/2 Kg",
         Flavour:"Black Forest",
         flavourId:"black-forest",

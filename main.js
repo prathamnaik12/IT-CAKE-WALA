@@ -19,9 +19,22 @@ document.addEventListener('DOMContentLoaded', function () {
       localStorage.setItem('clickedProductId', link.id);
     });
   });
+  let selectedFlavorId;
+
+  function saveSelectedFlavorId(id) {
+    selectedFlavorId = id;
+    console.log('Selected Flavor Id:', selectedFlavorId);
+    localStorage.setItem('selectedFlavourId', selectedFlavorId);
+  }
+
+  let flavorLinks = document.querySelectorAll('a[href*="/flavours.html"]');
+
+  flavorLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault(); 
+      var flavorId = link.id;
+      saveSelectedFlavorId(flavorId);
+      window.location.href = link.href; 
+    });
+  });
 });
-
-
-
-
-
