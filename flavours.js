@@ -28,7 +28,7 @@ function generateProductCards(selectedFlavourId) {
       img.src = selectedCake.src;
       aTag.id = selectedCake.id;
       h3Tag.textContent = selectedCake.name;
-      h1Tag.textContent = selectedCake.price;
+      h1Tag.textContent += selectedCake.price;
     }
   }
 
@@ -118,7 +118,7 @@ const flavourCakedata=[
         id:"Fudge-Brownie-Cake-1-kg",
         name:"Fudge Brownie Cake 1 kg",
         price:1275,
-        src: "./images/chocolate",
+        src: "./images/chocolate/chocolate-caramel-fudge-cake-half-kg_2.webp",
         Flavour:"Truffle",
         flavourId:"chocolate",
         Weight:"1 Kg",
