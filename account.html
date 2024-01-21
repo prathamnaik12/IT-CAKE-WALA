@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">\
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>IT CAKE WALA</title>
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
+</head>
+
+<body class="bg-red-50">
+  <div class="fixed top-0 w-full z-10">
+    <!-- Top bar -->
+    <div class="bg-topbar-color text-white p-2 ">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center pl-10">
+          <img src="./images/logo.png" alt="Logo" class="h-6 w-6 mr-2">
+          <span class="font-bold text-lg">IT CAKE WALA</span>
+        </div>
+
+        <!-- Contact Details and Links -->
+        <div class="hidden lg:flex lg:items-center space-x-4 ml-4 md:block">
+          <span class="text-white">Call Us: +91 921 242 2000</span>
+          <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
+          <a href="#" class="lg:inline-block ml-2 p-1 border rounded border-white text-white sm:hidden">Enquiry
+            Form</a>
+        </div>
+        <div
+          class="block absolute right-6 w-8 h-8 bg-white rounded-lg items-center justify-center filter drop-shadow-xl md:hidden flex">
+          <a href="cart.html" class="p-2">
+            <i class="fa fa-shopping-cart text-lime-900" style="font-size:24px;"></i>
+          </a>
+        </div> 
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav class="bg-red-200 filter drop-shadow-xl w-full">
+      <div class="container mx-auto px-4 flex justify-center items-center py-3">
+        <div class="lg:flex lg:items-center lg:w-auto" id="menu">
+          <form class="flex items-center mr-4 " role="search">
+            <button class="bg-green-500 text-white px-4 py-1 rounded-md mr-2" type="submit">Search</button>
+            <input class="form-input border-2 border-gray-500 px-2 py-1 rounded-md focus:outline-none" type="search"
+              placeholder="Search" aria-label="Search">
+          </form>
+          <ul class="flex items-center space-x-4 lg:space-x-8">
+            <li><a class="text-black hover:text-gray-300" href="./index.html">Home</a></li>
+            <li><a class="text-black hover:text-gray-300" href="./birthday.html">Birthday</a></li>
+            <li class="group relative">
+              <a class="text-black hover:text-gray-300" href="./anniversary.html">Anniversary</a>
+              <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
+                <li><a class="block px-4 py-2" href="#">Action</a></li>
+                <li><a class="block px-4 py-2" href="#">Another action</a></li>
+                <li>
+                  <hr class="border-t border-gray-500 my-2">
+                </li>
+                <li><a class="block px-4 py-2" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li><a class="text-black hover:text-gray-300" href="./personalised.html"
+                aria-disabled="true">Personalized</a>
+            </li>
+          </ul>
+          <div class="hidden absolute right-6 md:block">
+            <a href="cart.html">
+              <i class="fa fa-shopping-cart text-lime-900" style="font-size:36px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </div>
+  <div class="bg-blue-50 h-50 w-50 mt-40 m-2 md:m-40 md:p-20 filter drop-shadow-xl">
+    <div class="border-b-2 border-gray flex justify-center">
+        <h1 class="font-bold text-2xl">IT CAKE WALA</h1>
+    </div>
+    <div class="p-10 border-b-2 border-gray">
+    <h1>YOUR ORDERS</h1>
+  </div>
+  <div class="p-10 border-b-2 border-gray">
+    <h1>YOUR ACCOUNT</h1>
+  </div>
+  </div>
+  </body>
+  </html>
