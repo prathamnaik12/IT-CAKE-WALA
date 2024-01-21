@@ -848,8 +848,8 @@ video {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.overflow-x-auto {
-  overflow-x: auto;
+.overflow-auto {
+  overflow: auto;
 }
 
 .whitespace-nowrap {
