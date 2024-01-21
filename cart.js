@@ -7,10 +7,13 @@ let cartbtn = document.getElementById("cart");
 cartbtn.addEventListener('click', function () {
     let addedProductName = localStorage.getItem('product_name');
     let addedProductprice = localStorage.getItem('product_price');
-
+    let addedProductImg = localStorage.getItem('product_img')
+    console.log(addedProductName)
+    console.log(addedProductprice)
+    console.log(addedProductImg)
     productname.textContent = addedProductName;
-    productprice.textContent = addedProductprice;
-    productqty.setAttribute('im', addedProductqty); 
+    productprice.textContent += addedProductprice;
+    productImg.src = addedProductImg
 
     window.location.href = './cart.html';
 });
