@@ -426,7 +426,7 @@ let CakeData = [
         id:"Fudge-Brownie-Cake-1-kg",
         name:"Fudge Brownie Cake 1 kg",
         price:1275,
-        src: "./images/chocolate",
+        src: "./images/chocolate/chocolate-fudge-cake-half-kg_2.webp",
         Flavour:"Truffle",
         flavourId:"chocolate",
         Weight:"1 Kg",
