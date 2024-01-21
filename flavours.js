@@ -118,7 +118,7 @@ const flavourCakedata=[
         id:"Fudge-Brownie-Cake-1-kg",
         name:"Fudge Brownie Cake 1 kg",
         price:1275,
-        src: "./images/chocolate/chocolate-caramel-fudge-cake-half-kg_2.webp",
+        src: "./images/chocolate/fudge-brownie-cake-half-kg_1.webp",
         Flavour:"Truffle",
         flavourId:"chocolate",
         Weight:"1 Kg",
