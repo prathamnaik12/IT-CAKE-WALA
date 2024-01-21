@@ -76,124 +76,23 @@
     </nav>
 </div>
 <div class="container p-8 mx-auto mt-40 bg-white filter drop-shadow-xl border-8 border-red-100">
-  <div class="hidden md:block w-full overflow-y-scroll">
-      <div class="my-2">
-          <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
-      </div>
-      <table class="w-full shadow-inner border-4 border-gray-200">
-          <thead>
-              <tr class="bg-gray-100 ">
-                  <th class="px-6 py-3 font-bold whitespace-nowrap font-arial">Product</th>
-                  <th class="px-6 py-3 font-bold whitespace-nowrap">Qty</th>
-                  <th class="px-6 py-3 font-bold whitespace-nowrap">Price</th>
-                  <th class="px-6 py-3 font-bold whitespace-nowrap">Remove</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td class="p-4 px-6 text-center whitespace-nowrap" id="product-name">Product 1</td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <div>
-                          <button class="px-2 py-0 shadow">-</button>
-                          <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none" id="product-qty">
-                          <button class="px-2 py-0 shadow">+</button>
-                      </div>
-                  </td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap" id="product-price">&#8377 </td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
-                  </td>
-              </tr>
-              <tr class="hidden">
-                  <td class="p-4 px-6 text-center whitespace-nowrap">Product 2</td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <div>
-                          <button class="px-2 py-0 shadow">-</button>
-                          <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
-                          <button class="px-2 py-0 shadow">+</button>
-                      </div>
-                  </td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">$49.99</td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
-                  </td>
-              </tr>
-              <tr class="hidden">
-                <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
-                <td class="p-4 px-6 text-center whitespace-nowrap">
-                    <div>
-                        <button class="px-2 py-0 shadow">-</button>
-                        <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
-                        <button class="px-2 py-0 shadow">+</button>
-                    </div>
-                </td>
-                <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
-                <td class="p-4 px-6 text-center whitespace-nowrap">
-                    <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
-                </td>
-            </tr>
-            <tr class="hidden">
-              <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
-              <td class="p-4 px-6 text-center whitespace-nowrap">
-                  <div>
-                      <button class="px-2 py-0 shadow">-</button>
-                      <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
-                      <button class="px-2 py-0 shadow">+</button>
-                  </div>
-              </td>
-              <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
-              <td class="p-4 px-6 text-center whitespace-nowrap">
-                  <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
-              </td>
-          </tr>
-          <tr class="hidden">
-            <td class="p-4 px-6 text-center whitespace-nowrap">Product 1</td>
-            <td class="p-4 px-6 text-center whitespace-nowrap">
-                <div>
-                    <button class="px-2 py-0 shadow">-</button>
-                    <input type="text" name="qty" value="1" class="w-12 text-center bg-gray-100 outline-none">
-                    <button class="px-2 py-0 shadow">+</button>
-                </div>
-            </td>
-            <td class="p-4 px-6 text-center whitespace-nowrap">$99.99</td>
-            <td class="p-4 px-6 text-center whitespace-nowrap">
-                <button class="px-2 py-0 text-red-100 bg-red-600 rounded">x</button>
-            </td>
-        </tr>
-              <tr>
-                  <td class="p-4 px-6 text-center whitespace-nowrap"></td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <div class="font-bold">Total Qty - 2</div>
-                  </td>
-                  <td class="p-4 px-6 font-extrabold text-center whitespace-nowrap">Total - $149.98</td>
-                  <td class="p-4 px-6 text-center whitespace-nowrap">
-                      <button class="px-4 py-1 text-red-600 bg-red-100">Clear All</button>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
-      <div class="flex justify-end mt-4 space-x-2">
-          <button class="px-6 py-3 text-sm text-gray-800 bg-gray-200 hover:bg-gray-400">Cancel</button>
-          <button class="px-6 py-3 text-sm text-white bg-indigo-500 hover:bg-indigo-600">Proceed to Checkout</button>
-      </div>
-  </div>
-  <div>
-    <div class=" grid grid-cols-1 gap-4 md:hidden">
+    <div class=" grid grid-cols-1 gap-4 ">
       <div class="my-2">
         <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
     </div>
 
     <div class="bg-slate-50 p-10 filter drop-shadow-xl">
-      <img class="h-14 w-14 filter drop-shadow-xl" src="./images/anniversary/choco-hearts-love-designer-cake-half-kg_5.webp">
-      <h1 class="font-thin font-arial" id="product-name">product 1</h1>
-      <h1 class="font-large text-2xl font-arial">&#8377</h1>
-      <button type="button" href="./cart.html" class='bg-red-400 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto' id="cart">REMOVE</button>
+      <img class="h-14 w-14 filter drop-shadow-xl" src="" id="product-img">
+      <h1 class="font-thin font-arial" id="product-name">product</h1>
+      <h1 class="font-large text-2xl font-arial" id="product-price">&#8377</h1>
+      <button type="button" href="./cart.html" class='bg-red-400 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto' >REMOVE</button>
     <button type="button" onclick="buyNow()"
           class='bg-orange-400 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>BUY NOW</button>
     </div>
   </div>
 </div>
-<script src="product.js"></script>
 <script src="cart.js"></script>
+<script src="product.js"></script>
+
 </body>
 </html>
