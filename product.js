@@ -1,4 +1,6 @@
-
+let productImgSrc = "_"
+let productNametxt ="_"
+let productPricetxt = "_"
 
 document.addEventListener('DOMContentLoaded', function() {
   let clickedProductId = localStorage.getItem('clickedProductId');
@@ -11,57 +13,57 @@ document.addEventListener('DOMContentLoaded', function() {
   let productData = CakeData.find(product => product.id === clickedProductId);
 
   if (productData) {
-    let productImgSrc = productData.src
-    let productNametxt = productData.name
-    let productPricetxt = productData.price
+    productImgSrc = productData.src
+    productNametxt = productData.name
+    productPricetxt = productData.price
     let productImg = document.getElementById("product-img")
     let productName = document.getElementById("product-name")
     let productPrice = document.getElementById("product-price")
 
-    productImg.src = productImgSrc;
+    productImg.src = productImgSrc
     productName.textContent = productNametxt
     productPrice.textContent += productPricetxt
     }
 })
 
-    const slider = document.querySelector('.testimonial-slider');
-    const testimonials = document.querySelectorAll('.testimonial-item');
-    let index = 0;
+const slider = document.querySelector('.testimonial-slider');
+const testimonials = document.querySelectorAll('.testimonial-item');
+let index = 0;
 
-    function addToCart() {
-      saveFormData('cart');
-      localStorage.setItem('product_name',productNametxt)
-      localStorage.setItem('product_price',productPricetxt)
-      localStorage.setItem('product_img', productImg)
-      localStorage.setItem('product_qty',1)
-    }
+function addToCart() {
+  // saveFormData('cart');
+  localStorage.setItem('product_name',productNametxt)
+  localStorage.setItem('product_price',productPricetxt)
+  localStorage.setItem('product_img', productImgSrc)
+  localStorage.setItem('product_qty',1)
+}
 
-    function buyNow() {
-        saveFormData('buy');
-    }
+function buyNow() {
+    saveFormData('buy');
+}
 
-    function saveFormData(action) {
-        const location = document.getElementById('locationInput').value;
-        const date = document.getElementById('datefield').value;
-        const withEgg = document.getElementById('withEgg').checked;
-        const eggless = document.getElementById('eggless').checked;
-        const message = document.getElementById('messageInput').value;
+function saveFormData(action) {
+    const location = document.getElementById('locationInput').value;
+    const date = document.getElementById('datefield').value;
+    const withEgg = document.getElementById('withEgg').checked;
+    const eggless = document.getElementById('eggless').checked;
+    const message = document.getElementById('messageInput').value;
 
-        const formData = { location, date, withEgg, eggless, message, action };
-        fetch('http://localhost:5000/submit-form', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(yourFormData),
-        })
-          .then(response => response.json())
-          .then(data => {
-              console.log('Success:', data);
-          })
-          .catch(error => {
-              console.error('Error:', error);
-          });
+    const formData = { location, date, withEgg, eggless, message, action };
+    fetch('http://localhost:5000/submit-form', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(yourFormData),
+    })
+      .then(response => response.json())
+      .then(data => {
+          console.log('Success:', data);
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
 }
 
 let CakeData = [
