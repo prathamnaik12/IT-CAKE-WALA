@@ -80,36 +80,47 @@
             <div class="inline-flex pl-10 sm:pl-40">
                 <a class="text-black hover:text-gray-300" href="./index.html">Home</a><h1>></h1><a class="text-black hover:text-gray-300" id="navigated-pg-link" href="">_</a>
             </div>
+            
             <div class="w-full flex flex-col items-center p-10">
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
-                    <img class="h-32 w-32 md:h-auto md:w-auto" id="product-img" src="" alt="cake picture">
+                    <img class="h-32 w-32 md:h-auto md:w-auto" id="product-Img" src="" alt="cake picture">
                     <div>
-                        <h1 class="font-sans font-medium text-xl sm:text-medium" id="product-name"></h1>
-                        <h1 class="font-medium text-6xl pt-5" id="product-price"> &#8377 </h1>
+                        <h1 class="font-sans font-medium text-xl sm:text-medium" id="product-Name"></h1>
+                        <h1 class="font-medium text-6xl pt-5" id="product-Price"> &#8377 </h1>
                         <h4 class="font-thin text-gray-600">inclusive of all taxes</h4>
                     <div class="p-2 pt-5">
+                        <div class="hidden absolute flex h-12 justify-center items-center bg-slate-400" id="msg">
+                            <h1 class="text-xl text-red-500 pl-5 pr-5">PLEASE ENTER ALL DELIVERY DETAILS </h1>
+                        </div>
                         <h1 class="font-sans text-thin p-5 border-gray-300 border-b-2">Enter Delivery Details</h1>
+                        
                         <div class="mb-2 grid grid-cols-1 pt-2">
                             <label><input id="locationInput" type="text" placeholder="Enter delivery location"
-                                    class="border p-2 mr-2 flex-grow" /></label>
+                                    class="border p-2 mr-2 flex-grow" required/></label>
+                            <label class="pt-2"><input id="ContactInput" type="tel" placeholder="Enter mobile number" class="border p-2 mr-2 flex-grow"
+                                    required /></label>
                             <span class="text-lg text-gray-600 pt-5">delivery date </span><input id="datefield" type="date" min="2024-01-01"
-                                max="2024-12-31" />
+                                max="2024-12-31" required/>
                         </div>
                         <div class="mb-4 pt-4 grid grid-cols-2">
-                            <label class="mr-4"><input id="withEgg" type="radio" name="egg" /> With Egg <img class="h-5 w-5"
-                                    src="./images/nonveg.jpeg" alt=""></label>
-                            <label><input id="eggless" type="radio" name="eggless" /> Eggless <img class="h-5 w-5" src="./images/veg.jpeg"
-                                    alt=""></label>
+                            <label class="mr-4">
+                                <input id="withEgg" type="radio" name="egg" required>
+                                With Egg <img class="h-5 w-5" src="./images/nonveg.jpeg" alt="">
+                            </label>
+                            <label>
+                                <input id="eggless" type="radio" name="eggless">
+                                Eggless <img class="h-5 w-5" src="./images/veg.jpeg" alt="">
+                            </label>
                         </div>
                         <div class="mb-4 pt-4 grid grid-cols-1 p-4 border-gray-300 border-b-2">
                             <h1 class="font-sans text-thin p-5">Type the message u want your cake </h1>
-                            <textarea id="messageInput" class=" pt-4" placeholder='Message On Cake' rows='1' cols='25'></textarea>
+                            <textarea id="messageInput" class=" pt-4" placeholder='Message On Cake' rows='1' cols='25' required></textarea>
                         </div>
                         <div class='flex mt-4 pb-6 border-gray-300 border-b-2'>
-                            <button id="cart" type="button"  href="./cart.html"
-                                class='bg-topbar-color rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto' >ADD TO CART</button>
-                            <button type="button" onclick="buyNow()"
-                                class='bg-orange-400 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>BUY NOW</button>
+                            <button id="cart" type="button" onclick=" addToCart()"
+                                class='bg-topbar-color active:bg-lime-700 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto' >ADD TO CART</button>
+                            <button id="buy" type="button" onclick="buyNow()"
+                                class='bg-orange-400 active:bg-orange-700 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>BUY NOW</button>
                         </div>
                     </div>
                         <div class="border-gray-300 border-b-2">
@@ -318,7 +329,7 @@
             </footer>
         </div>
     </div>
-    <script src="product.js"></script>
+    <script type="module" src="./product.js"></script>
     <script src="main.js"></script>
     <script src="cart.js"></script>
 </body>
