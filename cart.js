@@ -30,10 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let addedProductQty = localStorage.getItem('product_qty')
 
     function renderCartItem(cartItem) {
+        if (cartArray.length <1 && cartItem.name === null || cartItem.price === null || cartItem.img === null || cartItem.qty === null ||
+        cartItem.name === undefined || cartItem.price === undefined || cartItem.img === undefined || cartItem.qty === undefined) {
+        return;
+    }
         let productDiv = document.createElement('div');
         productDiv.classList.add('cart-item', 'bg-slate-50', 'mt-5', 'p-10', 'filter', 'drop-shadow-xl')
         
-        // Use a unique identifier for each product
         let productDivCreatedId = cartItem.id
         productDiv.id = productDivCreatedId
 
@@ -88,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addToCart(item) {
         const isItemAlreadyInCart = cartArray.some(existingItem => existingItem.name === item.name)
-        if (!isItemAlreadyInCart) {
+        if (!isItemAlreadyInCart ) {
             cartArray.push(item)
             localStorage.setItem('cart', JSON.stringify(cartArray))
             renderCartItem(item)
@@ -101,19 +104,23 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             console.log(`Item with ID ${item.id} is already in the cart`)
         }
-        localStorage.setItem('product_name',null)
-        localStorage.setItem('product_price',null)
-        localStorage.setItem('product_img',null)
-        localStorage.setItem('product_qty',null)
+        localStorage.setItem('product_name','')
+        localStorage.setItem('product_price','')
+        localStorage.setItem('product_img','')
+        localStorage.setItem('product_qty','')
     }
 
-    addToCart({
-        name: addedProductName,
-        price: addedProductPrice,
-        img: addedProductImg,
-        qty: addedProductQty,
-        id: "Itemadded" + productIdIncrementer
-    });
+    if (addedProductName !== '' && addedProductPrice !== '' && addedProductImg !== '' && addedProductQty !== '') {
+        addToCart({
+            name: addedProductName,
+            price: addedProductPrice,
+            img: addedProductImg,
+            qty: addedProductQty,
+            id: "Itemadded" + productIdIncrementer
+        })
+        } else {
+            return
+        }
 
     console.log(cartArray)
 
