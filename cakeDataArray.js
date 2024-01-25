@@ -2,282 +2,458 @@ export const CakeData = [
   {
     id: "rich-chocolate-splash-cake-half-kg-eggless",
     price: 599,
-    size: "1/2 kg",
-    description: "chocolate cake",
     src: "./images/rich-chocolate-splash-cake-half-kg-eggless_1.webp",
-    name: "Rich Chocolate Cake Half kg Eggless"
+    name: "Rich Chocolate Cake Half kg Eggless",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    Version:"Eggless",
+    TypeofCake:"Cream",
+    Weight:"Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "butterscotch-cake-half-kg-eggless",
     price: 550,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/butterscotch-cake-half-kg-eggless_1.webp",
-    name: "Butterscotch Cake Half Kg Eggless"
+    name: "Butterscotch Cake Half Kg Eggless",
+    Flavour:"Butterscotch",
+    flavourId:"butterscotch",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "chocolate-caramel-fudge-cake-half-kg-eggless",
     price: 599,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/chocolate-caramel-fudge-cake-half-kg-eggless_1 (1).webp",
-    name: "Chocolate Caramel Fudge Cake Half Kg Eggless"
+    name: "Chocolate Caramel Fudge Cake Half Kg Eggless",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "dripping-chocolate-cake-half-kg-eggless",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/dripping-chocolate-cake-half-kg-eggless_1.webp",
-    name: "Dripping Chocolate Cake Half Kg Eggless"
+    name: "Dripping Chocolate Cake Half Kg Eggless",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "football-theme-chocolate-cake-eggless-1-kg",
     price: 899,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/football-theme-chocolate-cake-eggless-1-kg_1.webp",
-    name: "Football Theme Chocolate Cake Eggless 1 kg"
+    name: "Football Theme Chocolate Cake Eggless 1 kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "1 Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "red-velvet-fresh-cream-cake-half-kg_1",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/red-velvet-fresh-cream-cake-half-kg_1.webp",
-    name: "Red Velvet Fresh Cream Cake Half kg"
+    name: "Red Velvet Fresh Cream Cake Half kg",
+    Flavour:"Red Velvet",
+    flavourId:"red velvet",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "rose-paradise-chocolate-cake-eggless-half-kg",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/rose-paradise-chocolate-cake-eggless-half-kg_1 P5.webp",
-    name: "Rose Paradise Chocolate Cake Eggless Half Kg"
+    name: "Rose Paradise Chocolate Cake Eggless Half Kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "tropical-bliss-eggless-pineapple-bento-cake",
     price: 599,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/tropical-bliss-eggless-pineapple-bento-cake_1.webp",
-    name: "Tropical Bliss Eggless Pineapple Bento Cake"
+    name: "Tropical Bliss Eggless Pineapple Bento Cake",
+    Flavour:"Pineapple",
+    flavourId:"pineapple",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "truffle-cake-half-kg-eggless",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/truffle-cake-half-kg-eggless_1.webp",
-    name: "Truffle Cake Half kg Eggless"
+    name: "Truffle Cake Half kg Eggless",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "fudge-brownie-cake-half-kg",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/fudge-brownie-cake-half-kg_1.webp",
-    name: "Fudge Brownie Cake Half kg"
+    name: "Fudge Brownie Cake Half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "decorated-chocolate-truffle-cake-half-kg-eggless",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/decorated-chocolate-truffle-cake-half-kg-eggless_1 (1) P3.webp",
-    name: "Decorated Chocolate Truffle Cake Half kg Eggless"
+    name: "Decorated Chocolate Truffle Cake Half kg Eggless",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "heavenly-chocolate-sensation-eggless-cake",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/heavenly-chocolate-sensation-eggless-cake_2.webp",
-    name: "Heavenly Chocolate Sensation Eggless Cake Half kg"
+    name: "Heavenly Chocolate Sensation Eggless Cake Half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "heavenly-butterscotch-cream-cake-half-kg-eggless",
     price: 500,
-    size: "", // You can fill this value
-    description: "", // You can fill this value
     src: "./images/heavenly-butterscotch-cream-cake-half-kg-eggless_2.webp",
-    name: "Heavenly Butterscotch Cream Cake Half kg"
+    name: "Heavenly Butterscotch Cream Cake Half kg",
+    Flavour:"Butterscotch",
+    flavourId:"butterscotch",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "Blue_web",
-    price: 500,
-    size: "", 
-    description: "", 
+    price: 500, 
     src: "./images/Blue_web.webp",
-    name: "Blue vanila flaboured 1 kg"
+    name: "Blue vanila flaboured 1 kg",
+    Flavour:"Vanila",
+    flavourId:"vanila",
+    TypeofCake:"Cream",
+    Weight: "1 Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "Flowers-N-Cakes",
-    price: 1499,
-    size: "", 
-    description: "", 
+    price: 1499, 
     src: "./images/Flowers-N-Cakes_web.webp",
-    name: "Flowers N Cakes"
+    name: "Flowers N Cakes",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "fudge-brownie-cake-half-kg",
-    price: 675,
-    size: "", 
-    description: "", 
+    price: 675, 
     src: "./images/fudge-brownie-cake-half-kg_1.webp",
-    name: "fudge brownie cake half kg"
+    name: "fudge brownie cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "50th-anniversary-fondant-2-tier-cake-chocolate-3kg",
-    price: 3499,
-    size: "", 
-    description: "", 
+    price: 3499, 
     src: "./images/anniversary/50th-anniversary-fondant-2-tier-cake-chocolate-3kg_1.webp",
-    name: "anniversary fondant 2 tier cake chocolate 3kg"
+    name: "anniversary fondant 2 tier cake chocolate 3kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Fondant",
+    Weight: "3 Kg",
+    Shape:"Round",
+    Serves:"8-12 People",
+    Size:"8 inches in Diameter"
   },
   {
     id: "anniversary-special-chocolate-cake-half-kg",
     price: 725,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/anniversary-special-chocolate-cake-half-kg_1.webp",
-    name: "anniversary special chocolate cake half kg"
+    name: "anniversary special chocolate cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "butterscotch-bliss-eggless-cake",
     price: 1275,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/butterscotch-bliss-eggless-cake_1.webp",
-    name: "butterscotch bliss eggless cake"
+    name: "butterscotch bliss eggless cake",
+    Flavour:"Butterscotch",
+    flavourId:"butterscotch",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "choco-hearts-love-designer-cake-half-kg",
     price: 725,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/choco-hearts-love-designer-cake-half-kg_5.webp",
-    name: "choco hearts love designer cake half kg"
+    name: "choco hearts love designer cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "chocolate-caramel-fudge-cake-half-kg",
     price: 625,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/chocolate-caramel-fudge-cake-half-kg_1.webp",
-    name: "chocolate caramel fudge cake half kg"
+    name: "chocolate caramel fudge cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "decadent-floral-chocolate-cake-1-kg",
     price: 1699,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/decadent-floral-chocolate-cake-1-kg_1.webp",
-    name: "decadent floral chocolate cake 1 kg"
+    name: "decadent floral chocolate cake 1 kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "1 Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "delicious-heart-shaped-chocolate-cake-half-kg",
-    price: 750,
-    size: "", 
-    description: "", 
+    price: 750, 
     src: "./images/anniversary/delicious-heart-shaped-chocolate-cake-half-kg_1.webp",
-    name: "delicious heart shaped chocolate cake half kg"
+    name: "delicious heart shaped chocolate cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "happy-anniversary-heart-shaped-cake-half-kg",
     price: 799,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/happy-anniversary-heart-shaped-cake-half-kg_1.webp",
-    name: "happy anniversary heart shaped cake half kg"
+    name: "happy anniversary heart shaped cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "heart-shaped-cream-chocolate-cake-half-kg",
     price: 675,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/heart-shaped-cream-chocolate-cake-half-kg_2.webp",
-    name: "heart shaped cream chocolate cake half kg"
+    name: "heart shaped cream chocolate cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "heart-shaped-pineapple-cake-half-kg",
     price: 1499,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/heart-shaped-pineapple-cake-half-kg_1.webp",
-    name: "heart shaped pineapple cake half kg"
+    name: "heart shaped pineapple cake half kg",
+    Flavour:"Pineapple",
+    flavourId:"pineapple",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "joyful-bento-chocolate-temptation",
     price: 1725,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/joyful-bento-chocolate-temptation_1.webp",
-    name: "joyful bento chocolate temptation"
+    name: "joyful bento chocolate temptation",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "love-special-chocolate-photo-cake-half-kg",
     price: 1075,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/love-special-chocolate-photo-cake-half-kg_1.webp",
-    name: "love special chocolate photo cake half kg"
+    name: "love special chocolate photo cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "lovely-red-roses-around-chocolate-cake-half-kg",
-    price: 925,
-    size: "", 
-    description: "", 
+    price: 925, 
     src: "./images/anniversary/lovely-red-roses-around-chocolate-cake-half-kg_1.webp",
-    name: "lovely red roses around chocolate cake half kg"
+    name: "lovely red roses around chocolate cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "peach-roses-truffle-2-tier-cake-15-kg",
     price: 6250,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/peach-roses-truffle-2-tier-cake-15-kg_1.webp",
-    name: "peachroses truffle 2 tier cake 15 kg"
+    name: "peachroses truffle 2 tier cake 15 kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "15 Kg",
+    Shape:"Round",
+    Serves:"10-16 People",
+    Size:"8 inches in Diameter"
   },
   {
     id: "red-velvet-heart-cake-half-kg",
     price: 599,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/red-velvet-heart-cake-half-kg_1.webp",
-    name: "red velvet heart cake half kg"
+    name: "red velvet heart cake half kg",
+    Flavour:"Red velvet",
+    flavourId:"red velvet",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "rose-paradise-chocolate-cake-half-kg",
     price: 925,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/rose-paradise-chocolate-cake-half-kg_1.webp",
-    name: "rose paradise chocolate cake half kg"
+    name: "rose paradise chocolate cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Round",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "roses-on-heart-designer-cake-half-kg",
     price: 1250,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/roses-on-heart-designer-cake-half-kg_1.webp",
-    name: "roses on heart designer cake half kg"
+    name: "roses on heart designer cake half kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "Half Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "special-hearts-truffle-fondant-cake-1-kg",
     price: 999,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/special-hearts-truffle-fondant-cake-1-kg_1.webp",
-    name: "special hearts truffle fondant cake 1 kg"
+    name: "special hearts truffle fondant cake 1 kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Fondant",
+    Weight: "1 Kg",
+    Shape:"Heart",
+    Serves:"4-6 People",
+    Size:"6 inches in Diameter"
   },
   {
     id: "sweetheart-chocolate-cream-rose-cake-15-kg",
     price: 2999,
-    size: "", 
-    description: "", 
     src: "./images/anniversary/sweetheart-chocolate-cream-rose-cake-15-kg_1.webp",
-    name: "sweetheart chocolate cream rose cake 5 kg"
+    name: "sweetheart chocolate cream rose cake 5 kg",
+    Flavour:"Chocolate",
+    flavourId:"chocolate",
+    TypeofCake:"Cream",
+    Weight: "15 Kg",
+    Shape:"Heart",
+    Serves:"8-10 People",
+    Size:"6 inches in Diameter"
   },
   { //butterscotch
     id:"Heavenly-Butterscotch-Cake-Half-Kg",
