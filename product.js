@@ -34,10 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 cartbtn.addEventListener('click',function(){
+  saveFormData()
   addToCart()
 })
 
 buybtn.addEventListener('click', function(){
+  saveFormData()
   buyNow()
 })
 
@@ -81,16 +83,35 @@ function buyNow() {
   }
 }
 
-function saveFormData(action) {
+async function saveFormData(action) {
   const location = document.getElementById('locationInput').value
+  const contact = document.getElementById('ContactInput').value
   const date = document.getElementById('datefield').value
   const withEgg = document.getElementById('withEgg').checked
   const eggless = document.getElementById('eggless').checked
   const message = document.getElementById('messageInput').value
 
-  const formData = { location, date, withEgg, eggless, message, action }
+  const formData = { location, contact, date, withEgg, eggless, message, productNametxt, productPricetxt, action }
   console.log(formData)
   localStorage.setItem('formData', JSON.stringify(formData))
+
+  try {
+        const response = await fetch('http://127.0.0.1:5000/api/save_form_data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            console.log('Form data sent successfully')
+        } else {
+            console.error('Failed to send form data')
+        }
+    } catch (error) {
+        console.error('Error sending form data:', error)
+    }
 }
 
 
