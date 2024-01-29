@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         removeButton.textContent = 'REMOVE'
         removeButton.classList.add('bg-red-400', 'active:bg-red-600', 'rounded-lg', 'font-pacifico', 'font-bold', 'text-white', 'px-6', 'py-3', 'mr-auto')
         removeButton.addEventListener('click', function () {
+            emptyCart()
             productDiv.remove()
             const indexToRemove = cartArray.findIndex(item => item.id === cartItem.id)
             if (indexToRemove !== -1) {
