@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">\
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>IT CAKE WALA</title>
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
 
-<body loading="eager" class="bg-red-50">
+<body class="bg-red-50">
     <div class="fixed top-0 w-full z-10">
         <!-- Top bar -->
         <div class="bg-topbar-color text-white p-2 ">
@@ -27,15 +27,16 @@
                 <div class="hidden lg:flex lg:items-center space-x-4 ml-4 md:block">
                     <span class="text-white">Call Us: +91 921 242 2000</span>
                     <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
-                    <a href="./inquiryform.html"
+                    <a href="#"
                         class="lg:inline-block ml-2 p-1 border rounded border-white text-white sm:hidden">Enquiry
                         Form</a>
                 </div>
-                <div class="block absolute right-6 w-8 h-8 bg-white rounded-lg items-center justify-center filter drop-shadow-xl md:hidden ">
+                <div
+                    class="block absolute right-6 w-8 h-8 bg-white rounded-lg items-center justify-center filter drop-shadow-xl md:hidden flex">
                     <a href="cart.html" class="p-2">
                         <i class="fa fa-shopping-cart text-lime-900" style="font-size:24px;"></i>
                     </a>
-                </div> 
+                </div>
             </div>
         </div>
         <!-- navbar -->
@@ -67,64 +68,55 @@
                     </ul>
                     <div class="hidden absolute right-6 md:block">
                         <a href="cart.html">
-                          <i class="fa fa-shopping-cart text-lime-900" style="font-size:36px;"></i>
+                            <i class="fa fa-shopping-cart text-lime-900" style="font-size:36px;"></i>
                         </a>
-                      </div>    
+                    </div>
                 </div>
             </div>
         </nav>
     </div>
-    <h1
-      class="flex flex-col justify-center items-center mt-40 font-pacifico font-black p-2 text-2xl underline decoration-amber-900 hover:decoration-amber-300 transition-colors">
-      Cakes For Celebrating
-    </h1>
-    <div id="cakes" class="pt-10 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-8 filter drop-shadow-xl pl-1 pr-1 cakes-container" >
-        <div class="p-3 md:p-10 bg-white" id="cake1">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich"
-                    class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
-        <div class="p-3 md:p-10 bg-white" id="cake2">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich" class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
-        <div class="p-3 md:p-10 bg-white" id="cake3">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich" class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
-        <div class="p-3 md:p-10 bg-white" id="cake4">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich" class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
-        <div class="p-3 md:p-10 bg-white" id="cake5">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich" class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
-        <div class="p-3 md:p-10 bg-white" id="cake6">
-            <a class="" href="./product.html" id="">
-                <img src="" alt="Rich" class="rounded-lg border-4 border-black/25">
-                <h3 class="p-2"> </h3>
-                <h1 class="font-bold pl-5">&#8377 </h1>
-            </a>
-        </div>
+    <!-- cakes -->
+    <div class="bg-red-50 mt-40">
+        <h1
+            class="flex flex-col justify-center items-center font-pacifico font-black p-2 text-2xl underline decoration-amber-900 hover:decoration-amber-300 transition-colors">
+            Cakes For Celebrating Birthday
+        </h1>
     </div>
-    <script type="module" src="flavours.js"></script>
-    <script src="main.js"></script>
-    <script src="product.js"></script>
+    <div class="m-10 filter drop-shadow-xl">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <h1 class="block text-gray-700 text-sm font-bold mb-2 font-bold text-2xl" for="name">
+                    Name
+                </h1>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="John Doe" />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" type="email" placeholder="johndoe@example.com" />
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                    Message
+                </label>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="message" placeholder="Your message here"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                    Send
+                </button>
+            </div>
+        </form>
+
+    </div>
 </body>
 </html>
