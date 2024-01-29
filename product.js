@@ -1,14 +1,14 @@
 
 import { CakeData } from './cakeDataArray.js';
 
-let addtocart = "addtocart"
-let addtobuy = "addtobuy"
 let cartbtn = document.getElementById('cart')
 let buybtn = document.getElementById('buy')
 
 let productImgSrc = "_"
 let productNametxt ="_"
 let productPricetxt = "_"
+let addedtocart = "cart"
+let addedtobuy = "buy"
 
 document.addEventListener('DOMContentLoaded', function() {
   let clickedProductId = localStorage.getItem('clickedProductId')
@@ -37,13 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 cartbtn.addEventListener('click',function(){
   saveFormData()
-  localStorage.setItem('addTo',addtocart)
   addToCart()
 })
 
 buybtn.addEventListener('click', function(){
   saveFormData()
-  localStorage.setItem('addTo',addtobuy)
   buyNow()
 })
 
@@ -70,6 +68,7 @@ function addToCart() {
     localStorage.setItem('product_price',productPricetxt)
     localStorage.setItem('product_img', productImgSrc)
     localStorage.setItem('product_qty',1)
+    localStorage.setItem('addedto',addedtocart)
     window.location.href = './cart.html'
   }else {
     let msg = document.getElementById("msg")
@@ -81,6 +80,13 @@ function buyNow() {
 
   if(isFormValid()){
     saveFormData('buy')
+    localStorage.setItem('product_name',productNametxt)
+    localStorage.setItem('product_price',productPricetxt)
+    localStorage.setItem('product_img', productImgSrc)
+    localStorage.setItem('product_qty',1)
+    localStorage.setItem('addedto',addedtobuy)
+    window.location.href = './cart.html'
+
   }else {
     let msg = document.getElementById("msg")
     msg.classList.toggle("hidden")

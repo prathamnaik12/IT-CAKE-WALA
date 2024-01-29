@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let addedProductPrice = localStorage.getItem('product_price')
     let addedProductImg = localStorage.getItem('product_img')
     let addedProductQty = localStorage.getItem('product_qty')
+    let addTo = localStorage.getItem('addedto')
 
     function renderCartItem(cartItem) {
-        let addTo = localStorage.getItem('addTo')
         if (cartArray.length <1 && cartItem.name === null || cartItem.price === null || cartItem.img === null || cartItem.qty === null ||
         cartItem.name === undefined || cartItem.price === undefined || cartItem.img === undefined || cartItem.qty === undefined) {
         return;
@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
         productDiv.appendChild(productPrice)
         productDiv.appendChild(removeButton)
         productDiv.appendChild(buyButton)
-        if(addTo === "addtocart"){
+        if(cartItem.addTo == "cart"){
         productContainer.appendChild(productDiv)
-        }else if( addTo === "addtobuy"){
+        }else if(cartItem.addTo === "buy"){
             buyedContainer.appendChild(productDiv)
         }else{
             alert("Failed to add your item to cart")
@@ -125,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
             price: addedProductPrice,
             img: addedProductImg,
             qty: addedProductQty,
-            id: "Itemadded" + productIdIncrementer
+            id: "Itemadded" + productIdIncrementer,
+            addTo : addTo
         })
         } else {
             return
