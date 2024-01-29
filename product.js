@@ -1,6 +1,8 @@
 
 import { CakeData } from './cakeDataArray.js';
 
+let addtocart = "addtocart"
+let addtobuy = "addtobuy"
 let cartbtn = document.getElementById('cart')
 let buybtn = document.getElementById('buy')
 
@@ -35,11 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 cartbtn.addEventListener('click',function(){
   saveFormData()
+  localStorage.setItem('addTo',addtocart)
   addToCart()
 })
 
 buybtn.addEventListener('click', function(){
   saveFormData()
+  localStorage.setItem('addTo',addtobuy)
   buyNow()
 })
 
