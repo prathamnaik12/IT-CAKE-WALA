@@ -106,7 +106,7 @@ async function saveFormData(action) {
   localStorage.setItem('formData', JSON.stringify(formData))
 
   try {
-        const response = await fetch('http://127.0.0.1:5000/api/save_form_data', {
+        const response = await fetch('https://itcakewaladatahandling.vercel.app/api/save_form_data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
