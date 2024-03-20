@@ -26,14 +26,15 @@
         <div class="hidden lg:flex lg:items-center space-x-4 ml-4 md:block">
           <span class="text-white">Call Us: +91 921 242 2000</span>
           <span class="lg:inline-block ml-2 text-white">Corporate Gifts</span>
-          <a href="./inquiryform.html" class="lg:inline-block ml-2 p-1 border rounded border-white text-white hidden">Enquiry Form</a>
+          <a href="./inquiryform.html"
+            class="lg:inline-block ml-2 p-1 border rounded border-white text-white hidden">Enquiry Form</a>
         </div>
         <div
           class="block absolute right-6 w-8 h-8 bg-white rounded-lg items-center justify-center filter drop-shadow-xl md:hidden flex">
           <a href="cart.html" class="p-2">
             <i class="fa fa-shopping-cart text-lime-900" style="font-size:24px;"></i>
           </a>
-        </div> 
+        </div>
       </div>
     </div>
     <!-- navbar -->
@@ -48,11 +49,9 @@
           <ul class="flex items-center space-x-4 lg:space-x-8">
             <li><a class="text-black hover:text-gray-300 " href="./index.html">Home</a>
             </li>
-            <li><a class="text-black hover:text-gray-300 "
-                href="./birthday.html">Birthday</a></li>
+            <li><a class="text-black hover:text-gray-300 " href="./birthday.html">Birthday</a></li>
             <li class="group relative">
-              <a class="text-black hover:text-gray-300 "
-                href="./anniversary.html">Anniversary</a>
+              <a class="text-black hover:text-gray-300 " href="./anniversary.html">Anniversary</a>
               <ul class="absolute hidden bg-body-tertiary text-white mt-2 space-y-2">
                 <li><a class="block px-4 py-2" href="#">Action</a></li>
                 <li><a class="block px-4 py-2" href="#">Another action</a></li>
@@ -70,29 +69,33 @@
             <a href="cart.html">
               <i class="fa fa-shopping-cart text-lime-900" style="font-size:36px;"></i>
             </a>
-          </div>    
+          </div>
         </div>
       </div>
     </nav>
-</div>
-<!-- cart -->
-<div class="container p-8 mx-auto mt-40 bg-white filter drop-shadow-xl border-8 border-red-100" id="container2">
+  </div>
+  <!-- cart -->
+  <div class="container p-8 mx-auto mt-40 bg-white filter drop-shadow-xl border-8 border-red-100" id="container">
     <div class=" grid grid-cols-1 gap-4 ">
       <div class="my-2">
         <h3 class="text-xl font-bold tracking-wider">Ordered Cart</h3>
+      </div>
+    </div>
+    <div class="flex">
+      <button type="button" id="emptycart"
+        class='bg-orange-400 active:bg-orange-700 rounded-lg font-pacifico font-bold text-white px-6 py-3 mr-auto'>
+        Empty
+        Cart</button>
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NoIycuxnvi3ff7"
+          async> </script>
+      </form>
     </div>
   </div>
-</div>
-<div class="container p-8 mx-auto mt-5 bg-white filter drop-shadow-xl border-8 border-red-100" id="container1">
-  <div class=" grid grid-cols-1 gap-4 ">
-    <div class="my-2">
-      <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
-    </div>
-  </div>
-</div>
-<script src="cart.js"></script>
-<script type="module" src="./cakeDataArray.js"></script>
-<script src="product.js"></script>
+
+  <script src="cart.js"></script>
+
 
 </body>
+
 </html>

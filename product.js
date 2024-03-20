@@ -1,16 +1,17 @@
 
 import { CakeData } from './cakeDataArray.js';
 
-let cartbtn = document.getElementById('cart')
+let paybtn = document.getElementById('pay')
 let buybtn = document.getElementById('buy')
 
 let productImgSrc = "_"
-let productNametxt ="_"
+let productNametxt = "_"
 let productPricetxt = "_"
-let addedtocart = "cart"
-let addedtobuy = "buy"
 
-document.addEventListener('DOMContentLoaded', function() {
+
+const allLetters = [...'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ']
+
+document.addEventListener('DOMContentLoaded', function () {
   let clickedProductId = localStorage.getItem('clickedProductId')
 
   if (clickedProductId) {
@@ -32,96 +33,88 @@ document.addEventListener('DOMContentLoaded', function() {
     productImgP.src = productImgSrc
     productNameP.textContent = productNametxt
     productPriceP.textContent += productPricetxt
-    }
+  }
 })
 
-cartbtn.addEventListener('click',function(){
-  saveFormData()
-  addToCart()
-})
 
-buybtn.addEventListener('click', function(){
-  saveFormData()
+buybtn.addEventListener('click', function () {
   buyNow()
 })
 
 function isFormValid() {
-    const locationInput = document.getElementById('locationInput');
-    const datefield = document.getElementById('datefield');
-    const withEgg = document.getElementById('withEgg');
-    const eggless = document.getElementById('eggless');
-    const messageInput = document.getElementById('messageInput');
+  const locationInput = document.getElementById('locationInput')
+  const datefield = document.getElementById('datefield')
+  const withEgg = document.getElementById('withEgg')
+  const eggless = document.getElementById('eggless')
+  const messageInput = document.getElementById('messageInput')
 
-    return (
-        locationInput.checkValidity() &&
-        datefield.checkValidity() &&
-        (withEgg.checked || eggless.checked) &&
-        messageInput.checkValidity()
-    );
+  return (
+    locationInput.checkValidity() &&
+    datefield.checkValidity() &&
+    (withEgg.checked || eggless.checked) &&
+    messageInput.checkValidity()
+  );
 }
 
-function addToCart() {
-  console.log("addToCart function is being called.");
-  if(isFormValid()){
-    saveFormData('cart')
-    localStorage.setItem('product_name',productNametxt)
-    localStorage.setItem('product_price',productPricetxt)
-    localStorage.setItem('product_img', productImgSrc)
-    localStorage.setItem('product_qty',1)
-    localStorage.setItem('addedto',addedtocart)
-    window.location.href = './cart.html'
-  }else {
-    let msg = document.getElementById("msg")
-    msg.classList.toggle("hidden")
-  }
-}
+
 
 function buyNow() {
 
-  if(isFormValid()){
-    saveFormData('buy')
-    localStorage.setItem('product_name',productNametxt)
-    localStorage.setItem('product_price',productPricetxt)
+  if (isFormValid()) {
+    saveFormData()
+    localStorage.setItem('product_name', productNametxt)
+    localStorage.setItem('product_price', productPricetxt)
     localStorage.setItem('product_img', productImgSrc)
-    localStorage.setItem('product_qty',1)
-    localStorage.setItem('addedto',addedtobuy)
-    window.location.href = './cart.html'
+    localStorage.setItem('product_qty', 1)
 
-  }else {
+  } else {
     let msg = document.getElementById("msg")
     msg.classList.toggle("hidden")
   }
 }
 
-async function saveFormData(action) {
+async function saveFormData() {
+  const phonenumber = document.getElementById('ContactInput').value
+  let randomIndex, i, addLetter = ""
+  for (i = 0; i < 3; i++) {
+    randomIndex = Math.floor(Math.random() * allLetters.length)
+    addLetter += allLetters[randomIndex]
+  }
+
+  const idnumber = phonenumber + addLetter
+
+  const id = idnumber
+  localStorage.setItem('PID', id)
   const location = document.getElementById('locationInput').value
-  const contact = document.getElementById('ContactInput').value
+  const contact = phonenumber
   const date = document.getElementById('datefield').value
   const withEgg = document.getElementById('withEgg').checked
   const eggless = document.getElementById('eggless').checked
   const message = document.getElementById('messageInput').value
 
-  const formData = { location, contact, date, withEgg, eggless, message, productNametxt, productPricetxt, action }
+  const formData = { id, location, contact, date, withEgg, eggless, message, productNametxt, productPricetxt }
   console.log(formData)
   localStorage.setItem('formData', JSON.stringify(formData))
 
   try {
-        const response = await fetch('https://itcakewaladatahandling.vercel.app/api/save_form_data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        });
+    const response = await fetch('http://localhost:8000/api/save_form_data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-        if (response.ok) {
-            console.log('Form data sent successfully')
-        } else {
-            console.error('Failed to send form data')
-        }
-    } catch (error) {
-        console.error('Error sending form data:', error)
+    if (response.ok) {
+      console.log('Form data sent successfully')
+      window.location.href = './cart.html'
+    } else {
+      console.error('Failed to send form data')
     }
+  } catch (error) {
+    console.error('Error sending form data:', error)
+  }
+
 }
 
 
